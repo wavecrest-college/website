@@ -1,4 +1,5 @@
 import { CARD_POST } from "config/constants/editable-copy/home/values";
+import { uuid } from "uuidv4";
 
 const blogPost = "/assets/imgs/blogpost.png";
 const blogPost2 = "/assets/imgs/aboutus.png";
