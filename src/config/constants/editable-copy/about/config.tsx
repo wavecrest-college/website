@@ -1,6 +1,19 @@
 import { EditableUIConfig } from "../types";
 import { OurStoryProps } from "components/layouts/About/Profile/OurStory";
 import { OurPhilosophyProps } from "components/layouts/About/Profile/OurPhilosophy";
+import {
+  AwardClout,
+  OurCloutProps,
+  RecognitionClout,
+} from "components/layouts/About/Profile/OurClout";
+import {
+  GalleryImg,
+  GalleryProp,
+} from "components/layouts/About/Profile/Gallery";
+import {
+  MilestoneData,
+  MilestoneProp,
+} from "components/layouts/About/Milestone/Milestone";
 
 const ourStory: EditableUIConfig<OurStoryProps> = {
   name: "ourStory",
@@ -71,6 +84,86 @@ const philosophy: EditableUIConfig<OurPhilosophyProps> = {
   ],
 };
 
+export const awards: EditableUIConfig<OurCloutProps, AwardClout> = {
+  name: "awards",
+  title: "Edit Awards",
+  groupKey: "awardDesc",
+  emptyFormInitial: {
+    awardImg: "/assets/imgs/empty-img.jpeg",
+    awardDesc: "",
+  },
+  groupItems: [
+    { label: "Award Image", name: "awardImg", type: "image" },
+    {
+      label: "Award Description",
+      name: "awardDesc",
+      type: "text",
+      placeholder: "Enter Award Description",
+    },
+  ],
+};
+
+export const recognition: EditableUIConfig<OurCloutProps, RecognitionClout> = {
+  name: "recognitions",
+  title: "Edit Recognitions",
+  groupKey: "recogDesc",
+  emptyFormInitial: {
+    recogImg: "/assets/imgs/empty-img.jpeg",
+    recogDesc: "",
+  },
+  groupItems: [
+    { label: "Recognition Image", name: "recogImg", type: "image" },
+    {
+      label: "Recognition Description",
+      name: "recogDesc",
+      type: "text",
+      placeholder: "Enter Recognitions Description",
+    },
+  ],
+};
+
+export const gallery: EditableUIConfig<GalleryProp, GalleryImg> = {
+  name: "gallery",
+  title: "Edit Gallery",
+  groupKey: "galleryName",
+  emptyFormInitial: {
+    img: "/assets/imgs/empty-img.jpeg",
+    galleryName: "",
+  },
+  groupItems: [
+    { name: "img", label: "Add Image", type: "image" },
+    {
+      name: "galleryName",
+      label: "Add Image Name",
+      type: "text",
+      placeholder: "Enter Image Name",
+    },
+  ],
+};
+
+export const milestone: EditableUIConfig<MilestoneProp, MilestoneData> = {
+  name: "milestone",
+  title: "Edit Milestone",
+  groupKey: "year",
+  emptyFormInitial: {
+    year: "",
+    achievement: [""],
+  },
+  groupItems: [
+    { name: "year", label: "Enter Year", type: "text" },
+    { name: "achievement", label: "Enter Acheivements", type: "textarea" },
+  ],
+};
+
 export const aboutConfig = {
-  profile: { ourStory, philosophy },
+  profile: {
+    ourStory,
+    philosophy,
+    awards,
+    recognition,
+    gallery,
+  },
+  milestones: {
+    milestone,
+  },
 };

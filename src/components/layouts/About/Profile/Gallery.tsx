@@ -2,10 +2,18 @@ import { Link } from "@chakra-ui/react";
 import React from "react";
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import Slider from "react-slick";
-
 import NextImage from "next/legacy/image";
 
-export default function Gallery() {
+export type GalleryImg = {
+  galleryName: string;
+  img: string;
+};
+
+export type GalleryProp = {
+  galleryImgs: GalleryImg[];
+};
+
+export default function Gallery({ galleryImgs }: GalleryProp) {
   const [slider, setSlider] = React.useState<Slider>();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
@@ -31,17 +39,6 @@ export default function Gallery() {
     cssEase: "linear",
   };
 
-  const cards = [
-    "/assets/imgs/aboutGallery1.jpg",
-    "/assets/imgs/aboutGallery2.jpg",
-    "/assets/imgs/aboutGallery3.jpg",
-    "/assets/imgs/news.png",
-    "/assets/imgs/testimonial.png",
-    "/assets/imgs/programmes.png",
-    "/assets/imgs/aboutDesktopBanner.jpg",
-    "/assets/imgs/galleryImg.jpg",
-  ];
-
   return (
     <Box position={"relative"} overflow={"hidden"}>
       <Link
@@ -61,7 +58,7 @@ export default function Gallery() {
       ></Link>
 
       <Slider {...settings} ref={(slider) => setSlider(slider as Slider)}>
-        {cards.map((image, index) => (
+        {galleryImgs.map((image, index) => (
           <Box key={index} mr="10px">
             <Box
               key={index}
@@ -76,7 +73,7 @@ export default function Gallery() {
               position="relative"
             >
               <NextImage
-                src={image}
+                src={image.img}
                 layout="fill"
                 alt="gallery"
                 objectFit="cover"
