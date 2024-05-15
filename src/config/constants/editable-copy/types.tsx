@@ -29,7 +29,11 @@ export type EditableUIConfig<P = unknown, LItem = any> = (
     | "philosophy"
     | "announcements"
     | "partners"
-    | "ourStory";
+    | "awards"
+    | "recognitions"
+    | "gallery"
+    | "ourStory"
+    | "milestone";
   defaults?: P;
   title: string;
 };

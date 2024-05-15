@@ -18,7 +18,7 @@ type EditableProps = {
     | Record<string, string | undefined | string[]>
     | Record<string, string | undefined>[];
   config: EditableUIConfig<any>;
-  page: "home" | "shared" | "contact" | "aboutProfile";
+  page: "home" | "shared" | "contact" | "aboutProfile" | "aboutMilestone";
 };
 const Editable = (props: EditableProps) => {
   const { page, children, defaultValues, config } = props;

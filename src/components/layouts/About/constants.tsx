@@ -2,6 +2,8 @@ import React, { ReactNode } from "react";
 import Profile from "./Profile";
 import Milestone from "./Milestone/Milestone";
 import OurTeam from "./OurTeam";
+import { combinedConstant } from "config/constants/editable-copy/combined";
+
 const imageAvatar = "/assets/imgs/image-avatar.png";
 
 export type MenuLink = {
@@ -9,6 +11,14 @@ export type MenuLink = {
   href: string;
   linkTitle: string;
   content: ReactNode;
+};
+
+// const { data } = useCopyData();
+// console.log("Data: ", data);
+
+const { milestones } = {
+  ...combinedConstant.aboutMilestone,
+  // ...data.aboutMilestone,
 };
 
 export const menuLinks: MenuLink[] = [
@@ -22,7 +32,7 @@ export const menuLinks: MenuLink[] = [
     id: "milestone",
     href: "/about/milestone",
     linkTitle: "MILESTONE",
-    content: <Milestone />,
+    content: <Milestone milestones={milestones} />,
   },
   {
     id: "ourTeam",
@@ -49,139 +59,6 @@ export const ourStands = [
       R - Respect for Others
       I - Industriousness
       T - Teamwork`,
-  },
-];
-
-export const milestones = [
-  {
-    year: "1973",
-    achievement:
-      "The College started a 1-year programme in Housekeeping for girls with their first school-leaving cerificate in a modest house in Animashaun Street, Surulere",
-  },
-  {
-    year: "1978",
-    achievement:
-      "Wavecrest Training Centre formally began in its location at 75 Adisa Bashua Street in Surulere, as a centre for professional training of young women interested in developing their skills in a career in the field of Catering. By 1980, for the first time students were presented for the City & Guilds London Examinations in Basic Cookery and Home Craft.",
-  },
-
-  {
-    year: "1987",
-    achievement:
-      "Student's were presented as external candidates for the WAEC Technical Examinations in Hotel and Catering",
-  },
-
-  {
-    year: "1990",
-    achievement:
-      "An Extension for the Training Center was built. In the same year , recognition was received from the State Ministry of Education as a continuing education center",
-  },
-
-  {
-    year: "1991",
-    achievement:
-      " The West African Examination Council (WAEC) accredited Wavecrest as an instruction and examination centre for WAEC 894 Technical Examination in Hotel & Catering. In 1995 The National Business and Technical Examination Board (NABTEB), which has taken over the WAEC examinations, accorded the Centre with the same recognition as an instruction and examination centre for the National Technical Certificate (NTC) Examination.",
-  },
-  {
-    year: "1998",
-    achievement:
-      "In an attempt to upgrade the career of Hospitality Management, seeking to make a stronger contribution to raising the standards of the Hospitality sector in Nigeria, it was decided to apply for recognition to the National Board for Technical Education (NBTE) as a Monotechnic offering courses that would lead to the National Diploma (ND). ",
-  },
-  {
-    year: "1999",
-    achievement:
-      "The Federal Ministry granted the approval to establish the Wavecrest College of Catering and Hospitality Management able to run ND programmes.",
-  },
-  {
-    year: "2002",
-    achievement:
-      "NBTE granted the approval to commence the National Diploma in Hotel and Catering Management Programme.",
-  },
-  {
-    year: "2005",
-    achievement: "Accreditation of the National Diploma Programme",
-  },
-  {
-    year: "2006",
-    achievement:
-      "NBTE granted the approval to commence the Higher National Diploma (HND) Programme in Hotel and Catering Management",
-  },
-  {
-    year: "2010",
-    achievement:
-      "Received the 2010 Platinum award for the best hospitality educational institute in West Africa Tourism and Hospitality Awards (WATHA)",
-  },
-  {
-    year: "2011",
-    achievement:
-      "Received the 2011 Platinum award for the best hospitality educational institute in West Africa Tourism and Hospitality Awards (WATHA)",
-  },
-  {
-    year: "2012",
-    achievement:
-      "Platinum Winner of the West African Tourism and Hospitality Award (WATHA) for the best Hospitality Educational Institute in West Africa.",
-  },
-  {
-    year: "2014",
-    achievement: [
-      "Wavecrest became the Approved International Center for the Institute of Hospitality (IHG), UK Management Qualifications",
-      "Wavecrest came 2nd in the Accor students take off Finals in Paris, a global student’s competition.",
-      "Official signing of the Memorandum of Agreement with Intercontinental Hotel Group. Wavecrest becomes an official IHG Academy Partner",
-    ],
-  },
-  {
-    year: "2015",
-    achievement:
-      "Appointed training provider for the National Vocational Qualification (NVQ) recently approved by the Federal Government",
-  },
-  {
-    year: "2016",
-    achievement:
-      "Eight students awarded a Swiss Government scholarship to study in the Swiss Hotel School – Boma International Hospitality College in Nairobi Kenya",
-  },
-  {
-    year: "2017",
-    achievement:
-      "Signed MOU for collaboration with UNDP and Lagos State Employment Trust Fund (LSETF) through the Lagos State Employability Support Project to train 1,500 youth in Hospitality Skills.",
-  },
-  {
-    year: "2018",
-    achievement: [
-      "The Pyne Awards for Best Institution for the Development of Women in Nigeria.",
-
-      "The African Travel Times Magazine Award for Best Hospitality College for Women (West Africa).",
-    ],
-  },
-  {
-    year: "2019",
-    achievement: [
-      "Collaborated with the Federal Government as a training center for N-Power",
-    ],
-  },
-  {
-    year: "2021",
-    achievement: [
-      "Received Ishk Tolaram foundation grant to support the training of 60 girls to acquire Hospitality skills",
-      "Received Award of Excellence, Best N-Power training center for Hospitality trades (South-West Zone)",
-    ],
-  },
-  {
-    year: "2022",
-    achievement: [
-      "Collaborated with Nestle; sole sponsors of our 2022 Hospitality Week",
-    ],
-  },
-  {
-    year: "2023",
-    achievement: [
-      "Received the Skills Initiative for Africa(SIFA) Grant; an initiative of Africa Union Development Agency (AUDA NEPAD) supported by the German Government",
-      "Collaborated with ARISE FOUNDATION to train 75 women, irregular migrants and returnees",
-    ],
-  },
-  {
-    year: "2024",
-    achievement: [
-      "Collaborated with Ginonaija ; sole sponsor of our 2024 Hospitality Week",
-    ],
   },
 ];
 
@@ -332,11 +209,6 @@ export const staffs = [
     title: "Non-Academic Staff",
     others: [
       {
-        image: "/assets/imgs/nonAcademicStaff/felicitas.png",
-        name: "Felicitas Odome",
-        post: "Social Media and Digital Marketing Personnel",
-      },
-      {
         image: "/assets/imgs/nonAcademicStaff/Nnena.png",
         name: "Okorie Nnenna",
         post: "Assistant Account Officer",
@@ -399,41 +271,5 @@ export const staffs = [
         post: "Store Supervisor",
       },
     ],
-  },
-];
-
-export const awards = [
-  {
-    awardImg: "/assets/imgs/award1.png",
-    awardDesc:
-      "3-Time Platinum Winner for Best Educational Institute West Africa Tourism & Hospitality Awards (WATHA 2010-2012)",
-  },
-  {
-    awardImg: "/assets/imgs/award2.png",
-    awardDesc:
-      "The Pyne Awards Winner BEST INSTITUTION FOR THE DEVELOPMENT OF WOMEN IN NIGERIA 2018",
-  },
-  {
-    awardImg: "/assets/imgs/award3.png",
-    awardDesc:
-      "The African Travel Times Magazine Award for Best Hospitality College for Women (West Africa) 2018",
-  },
-];
-
-export const recognitions = [
-  {
-    recogImg: "/assets/imgs/recog1.png",
-    recogDesc:
-      "Vocational Training Centre in Hospitality for Lagos State Employment Trust Fund (LSETF) through the Lagos State Employability Support Project 2018",
-  },
-  {
-    recogImg: "/assets/imgs/recog1.png",
-    recogDesc:
-      "The icing on the cake”…Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-  },
-  {
-    recogImg: "/assets/imgs/recog1.png",
-    recogDesc:
-      "Appointed Training Provider for the National Vocational Qualification (NVQ) Recently Approved by the Federal Government 2015",
   },
 ];

@@ -29,7 +29,7 @@ const Profile = () => {
 
   const { data } = useCopyData();
 
-  const { ourStory, philosophy } = {
+  const { ourStory, philosophy, awards, recognitions, galleryImgs } = {
     ...combinedConstant.aboutProfile,
     ...data.aboutProfile,
   };
@@ -60,7 +60,7 @@ const Profile = () => {
         <OurPhilosophy {...philosophy} />
       </Editable>
 
-      <OurClout />
+      <OurClout awards={awards} recognitions={recognitions} />
 
       <Box
         bg="#EBEDEF"
@@ -74,7 +74,13 @@ const Profile = () => {
       >
         <SectionTitle heading="Our Swags" subHeading="Gallery" />
 
-        <Gallery />
+        <Editable
+          defaultValues={galleryImgs}
+          config={aboutConfig.profile.gallery}
+          page="aboutProfile"
+        >
+          <Gallery galleryImgs={galleryImgs} />
+        </Editable>
       </Box>
 
       <Box

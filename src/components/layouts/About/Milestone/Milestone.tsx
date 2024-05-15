@@ -6,21 +6,34 @@ import Nineties from "./Responsive Milestone/Nineties";
 import Twenties from "./Responsive Milestone/Twenties";
 import TwentyTens from "./Responsive Milestone/TwentyTens";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
-import { milestones } from "../constants";
 import MobileRedirect from "components/molecules/MobileRedirect";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
+import Editable from "components/organisms/Editable/Editable";
+import { combinedConfig } from "config/constants/editable-copy/combined";
 
-const Milestone = () => {
-  const redirects = [
-    {
-      name: "PROFILE",
-      url: "/about/profile",
-    },
-    {
-      name: "OUR TEAM",
-      url: "/about/ourTeam",
-    },
-  ];
+export type MilestoneData = {
+  year: string;
+  achievement: string[];
+};
+
+export type MilestoneProp = {
+  milestones: MilestoneData[];
+};
+
+const redirects = [
+  {
+    name: "PROFILE",
+    url: "/about/profile",
+  },
+  {
+    name: "OUR TEAM",
+    url: "/about/ourTeam",
+  },
+];
+
+const Milestone = ({ milestones }: MilestoneProp) => {
+  const { aboutConfig } = combinedConfig;
+
   return (
     <Box>
       <MobileSideBar />
@@ -49,56 +62,62 @@ const Milestone = () => {
             "2xl": "block",
           }}
         >
-          {milestones.map((milestone, index) => {
-            const textToShow = Array.isArray(milestone.achievement)
-              ? milestone.achievement.map((values, i) => (
-                  <Box key={i}>{values}</Box>
-                ))
-              : milestone.achievement;
+          <Editable
+            defaultValues={milestones as any}
+            config={aboutConfig.milestones.milestone}
+            page="aboutMilestone"
+          >
+            {milestones.map((milestone, index) => {
+              const textToShow = Array.isArray(milestone.achievement)
+                ? milestone.achievement.map((values, i) => (
+                    <Box key={i}>{values}</Box>
+                  ))
+                : milestone.achievement;
 
-            return (
-              <Fragment key={index}>
-                <Flex flexDirection="column" alignItems="baseline">
-                  <Flex alignItems="baseline" mb="-8px">
-                    <Box
-                      bg="#021D37"
-                      w="20px"
-                      h="20px"
-                      ml="-9px"
-                      borderRadius="100%"
-                    ></Box>
+              return (
+                <Fragment key={index}>
+                  <Flex flexDirection="column" alignItems="baseline">
+                    <Flex alignItems="baseline" mb="-8px">
+                      <Box
+                        bg="#021D37"
+                        w="20px"
+                        h="20px"
+                        ml="-9px"
+                        borderRadius="100%"
+                      ></Box>
 
-                    <Heading
-                      fontFamily="Playfair Display"
-                      fontSize="32px"
-                      fontWeight="700"
-                      lineHeight="43px"
-                      color="#021D37"
-                      pt="15px"
-                      ml="34px"
-                    >
-                      {milestone.year}
-                    </Heading>
+                      <Heading
+                        fontFamily="Playfair Display"
+                        fontSize="32px"
+                        fontWeight="700"
+                        lineHeight="43px"
+                        color="#021D37"
+                        pt="15px"
+                        ml="34px"
+                      >
+                        {milestone.year}
+                      </Heading>
+                    </Flex>
+
+                    <Box borderLeft="2px solid #EBEDEF" mb="-30px">
+                      <Text
+                        fontFamily="Manrope"
+                        fontSize="24px"
+                        fontWeight="400"
+                        lineHeight="33px"
+                        mb="10px"
+                        ml="45px"
+                        pt="15px"
+                        pb="25px"
+                      >
+                        {textToShow}
+                      </Text>
+                    </Box>
                   </Flex>
-
-                  <Box borderLeft="2px solid #EBEDEF" mb="-30px">
-                    <Text
-                      fontFamily="Manrope"
-                      fontSize="24px"
-                      fontWeight="400"
-                      lineHeight="33px"
-                      mb="10px"
-                      ml="45px"
-                      pt="15px"
-                      pb="25px"
-                    >
-                      {textToShow}
-                    </Text>
-                  </Box>
-                </Flex>
-              </Fragment>
-            );
-          })}
+                </Fragment>
+              );
+            })}
+          </Editable>
         </Box>
 
         <Box
@@ -113,11 +132,45 @@ const Milestone = () => {
           }}
         >
           <Box>
-            <Seventies />
-            <Eighties />
-            <Nineties />
-            <Twenties />
-            <TwentyTens />
+            <Editable
+              defaultValues={milestones as any}
+              config={aboutConfig.milestones.milestone}
+              page="aboutMilestone"
+            >
+              <Seventies />
+            </Editable>
+
+            <Editable
+              defaultValues={milestones as any}
+              config={aboutConfig.milestones.milestone}
+              page="aboutMilestone"
+            >
+              <Eighties />
+            </Editable>
+
+            <Editable
+              defaultValues={milestones as any}
+              config={aboutConfig.milestones.milestone}
+              page="aboutMilestone"
+            >
+              <Nineties />
+            </Editable>
+
+            <Editable
+              defaultValues={milestones as any}
+              config={aboutConfig.milestones.milestone}
+              page="aboutMilestone"
+            >
+              <Twenties />
+            </Editable>
+
+            <Editable
+              defaultValues={milestones as any}
+              config={aboutConfig.milestones.milestone}
+              page="aboutMilestone"
+            >
+              <TwentyTens />
+            </Editable>
           </Box>
 
           <Flex

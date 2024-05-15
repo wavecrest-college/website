@@ -35,10 +35,10 @@ const announcements = [
     title: "Screening for 2024/2025 Academic Session",
     text: "Discover necessary skillset for professionalism in the Hospitality Industry. Discover, Hospitality. ",
     date: "Every Last Tuesday of the Month till October.",
-    linkTo: "#",
+    linkTo: "https://tinyurl.com/WCH-Application-Form-24-25",
     notice:
       "Candidates outside Lagos would have an online screening and date would be communicated",
-    link: "Read More",
+    link: "Apply Now",
   },
   {
     flier: "/assets/imgs/weekday-culinary.jpg",
