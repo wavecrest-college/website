@@ -74,10 +74,9 @@ export const BLOGS = [
           )
         )}`,
 
-        postHeading: "Finishing Strong... Our 2023 Success Stories",
-        postsText: `Wavecrest College received the SKILLS INITIATIVE FOR AFRICA(SIFA) grant for the construction of the WAVECREST-HSEDCE. 
-        
-        Through this expansion, we will train 1,000 women annually and serve the growing demands of skilled labor in the Hospitality Industry`,
+        postHeading: "Wavecrest College received the SKILLS INITIATIVE FOR AFRICA(SIFA) grant for the construction of the WAVECREST-HSEDCE",
+        postsText: `Through this expansion, we will train 1,000 women annually and serve the growing demands of skilled labor in the Hospitality Industry`,
+
       },
       {
         bg: "#FFF",
