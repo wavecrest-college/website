@@ -16,6 +16,15 @@ const airTravels = "/assets/imgs/air-travels.jpg";
 const ekpangNkukwo = "/assets/imgs/Ekpang-Nkukwo.jpg";
 const studentLetter = "/assets/imgs/student-letter.png";
 const developingSkills = "/assets/imgs/developing-skills.jpg";
+const finishingStrong = "/assets/imgs/finishing-strong.png";
+const foodFair1 = "/assets/imgs/food_fair_1.jpg";
+const foodFair2 = "/assets/imgs/food_fair_2.jpg";
+const careerDrive1 = "/assets/imgs/career_drive1.jpg";
+const careerDrive2 = "/assets/imgs/career_drive2.jpg";
+const instructorTraining = "/assets/imgs/instructors_training.jpg";
+const instructorTraining2 = "/assets/imgs/instructors_training2.jpg";
+const lsgSkyChef = "/assets/imgs/lsg-_sky_chef_1.jpg";
+const lsgSkyChef2 = "/assets/imgs/lsg-_sky_chef_2.jpg";
 
 type Post = {
   bg: string;
@@ -58,12 +67,13 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "59158268-3083-4c16-96fd-0bb870881c19",
         isTopPost: true,
-        postsImg: NBTEdirector,
+        postsImg: finishingStrong,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
           )
         )}`,
+
         postHeading: "Finishing Strong... Our 2023 Success Stories",
         postsText: `Wavecrest College received the SKILLS INITIATIVE FOR AFRICA(SIFA) grant for the construction of the WAVECREST-HSEDCE. 
         
@@ -73,13 +83,14 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "f0c88162-56d5-4015-b492-b81e6d59793f",
         isTopPost: true,
-        postsImg: NBTEdirector,
+        postsImg: foodFair1,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
           )
         )}`,
         postHeading: "fundraising food fair",
+        coverImage: foodFair2,
         postsText: `The Food Fair was held on the 24th of June, 2023, at the Wavecrest College.
           
           THE OBJECTIVES
@@ -120,9 +131,10 @@ export const BLOGS = [
       },
       {
         bg: "#FFF",
-        postId: "cc528aa8-5ac7-4056-a305-d5d8805bdaaf",
+        postId: "cc528aa8-5ac7-4056-a305-b6e9912ceddg",
         isTopPost: true,
-        postsImg: NBTEdirector,
+        postsImg: instructorTraining,
+        coverImage: instructorTraining2,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
@@ -342,7 +354,8 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "669ddb38-969d-416d-a0c9-662eb338a777",
         isTopPost: true,
-        postsImg: NBTEdirector,
+        postsImg: lsgSkyChef,
+        coverImage: lsgSkyChef2,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
@@ -372,13 +385,15 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "a99c2d02-f317-487e-9f03-97cbb36f45fb",
         isTopPost: false,
-        postsImg: NBTEdirector,
+        postsImg: careerDrive1,
+
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
           )
         )}`,
         postHeading: "CAREER DRIVES",
+        coverImage: careerDrive2,
         postsText: `Career Drives are a yearly feature at Wavecrest College and serve as an opportunity to achieve our mission of creating awareness of the Hospitality Career. The Drives took place in several batches both within the College and in various schools in Lagos.
 
         In 2023, we had the pleasure to host students of the following schools:
