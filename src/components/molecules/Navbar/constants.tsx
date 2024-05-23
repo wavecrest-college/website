@@ -148,7 +148,7 @@ export const sideLinks = [
   },
   {
     name: "APPLY NOW",
-    href: "/admission/applyOnline",
+    href: "https://tinyurl.com/WCH-Application-Form-24-25",
     variant: "filled" as const,
   },
 ];
