@@ -25,6 +25,16 @@ const instructorTraining = "/assets/imgs/instructors_training.jpg";
 const instructorTraining2 = "/assets/imgs/instructors_training2.jpg";
 const lsgSkyChef = "/assets/imgs/lsg-_sky_chef_1.jpg";
 const lsgSkyChef2 = "/assets/imgs/lsg-_sky_chef_2.jpg";
+const wheatbaker = "/assets/imgs/wheatbaker.jpg";
+const wheatbaker2 = "/assets/imgs/wheatbaker2.jpg";
+const arise = "/assets/imgs/arise.jpg";
+const arise2 = "/assets/imgs/arise2.jpg";
+const ishkTolaram = "/assets/imgs/ishkTolaram.jpg";
+const internship = "/assets/imgs/internship.jpg";
+const swiss = "/assets/imgs/swiss.jpg";
+const swiss2 = "/assets/imgs/swiss2.jpg";
+const staffSeminar = "/assets/imgs/staff-seminar.jpg";
+const staffSeminar2 = "/assets/imgs/staff-seminar-2.jpg";
 
 type Post = {
   bg: string;
@@ -74,9 +84,9 @@ export const BLOGS = [
           )
         )}`,
 
-        postHeading: "Wavecrest College received the SKILLS INITIATIVE FOR AFRICA(SIFA) grant for the construction of the WAVECREST-HSEDCE",
+        postHeading:
+          "Wavecrest College received the SKILLS INITIATIVE FOR AFRICA(SIFA) grant for the construction of the WAVECREST-HSEDCE",
         postsText: `Through this expansion, we will train 1,000 women annually and serve the growing demands of skilled labor in the Hospitality Industry`,
-
       },
       {
         bg: "#FFF",
@@ -109,7 +119,8 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "22bd4ef5-20da-449c-8c9b-d9f0810b2dcd",
         isTopPost: true,
-        postsImg: NBTEdirector,
+        postsImg: ishkTolaram,
+        coverImage: ishkTolaram,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
@@ -163,7 +174,8 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "4eaf5c04-9f63-4290-88fb-72e739357e17",
         isTopPost: false,
-        postsImg: NBTEdirector,
+        postsImg: internship,
+        coverImage: internship,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
@@ -225,7 +237,8 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "818038d4-3277-490a-9c8c-365f1cda6142",
         isTopPost: false,
-        postsImg: NBTEdirector,
+        postsImg: staffSeminar,
+        coverImage: staffSeminar2,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
@@ -258,9 +271,10 @@ export const BLOGS = [
       },
       {
         bg: "#FFF",
-        postId: "cc528aa8-5ac7-4056-a305-d5d8805bdaaf",
+        postId: "cc528aa8-5ac7-4056-a305-3n92nf02ifo",
         isTopPost: false,
-        postsImg: NBTEdirector,
+        postsImg: wheatbaker,
+        coverImage: wheatbaker2,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
@@ -287,7 +301,8 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "6a18f570-d0b4-455e-a9ff-a03a0417119e",
         isTopPost: false,
-        postsImg: NBTEdirector,
+        postsImg: swiss,
+        coverImage: swiss2,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
@@ -322,7 +337,8 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "cc528aa8-5ac7-4056-a305-d5d8805bdaaf",
         isTopPost: false,
-        postsImg: NBTEdirector,
+        postsImg: arise,
+        coverImage: arise2,
         postsDate: `News and Events / ${formatDate(
           new Date(
             "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
