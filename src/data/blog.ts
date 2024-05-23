@@ -369,7 +369,7 @@ export const BLOGS = [
       {
         bg: "#FFF",
         postId: "669ddb38-969d-416d-a0c9-662eb338a777",
-        isTopPost: true,
+        isTopPost: false,
         postsImg: lsgSkyChef,
         coverImage: lsgSkyChef2,
         postsDate: `News and Events / ${formatDate(
