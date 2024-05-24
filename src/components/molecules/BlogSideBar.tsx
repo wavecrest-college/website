@@ -149,10 +149,11 @@ const BlogSideBar = ({
 
                   <Box>
                     <Heading
-                      fontFamily="Playfair Display"
-                      fontWeight="700"
+                      noOfLines={2}
+                      fontFamily="Manrope"
                       fontSize="16px"
                       ml="20px"
+                      textTransform="uppercase"
                       lineHeight="21px"
                     >
                       {post.postHeading}
