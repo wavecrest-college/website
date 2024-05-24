@@ -30,6 +30,7 @@ const wheatbaker2 = "/assets/imgs/wheatbaker2.jpg";
 const arise = "/assets/imgs/arise.jpg";
 const arise2 = "/assets/imgs/arise2.jpg";
 const ishkTolaram = "/assets/imgs/ishkTolaram.jpg";
+const ishkTolaram2 = "/assets/imgs/ishkTolaram2.jpg";
 const internship = "/assets/imgs/internship.jpg";
 const swiss = "/assets/imgs/swiss.jpg";
 const swiss2 = "/assets/imgs/swiss2.jpg";
@@ -119,7 +120,7 @@ export const BLOGS = [
         bg: "#FFF",
         postId: "22bd4ef5-20da-449c-8c9b-d9f0810b2dcd",
         isTopPost: true,
-        postsImg: ishkTolaram,
+        postsImg: ishkTolaram2,
         coverImage: ishkTolaram,
         postsDate: `News and Events / ${formatDate(
           new Date(
