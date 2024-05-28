@@ -1,8 +1,7 @@
-import { Box, Button, Flex, Input, Select, Text } from "@chakra-ui/react";
+import { Button, Input, Select, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { forms, Programme, programmes } from "./data";
 import NextLink from "next/link";
-import PeaceImage from "components/atoms/PeaceImage";
 
 type ApplyOnlineFormProp = {
   price: string;
@@ -12,28 +11,8 @@ type ApplyOnlineFormProp = {
 };
 
 const ApplyOnlineForm = (props: ApplyOnlineFormProp) => {
-  const visa = "/assets/imgs/visa.png";
-  const paypal = "/assets/imgs/paypal.png";
-  const mastercard = "/assets/imgs/mastercard.png";
 
   const { price, onChange, showCoursePrice } = props;
-  const payNow = [
-    {
-      image: paypal,
-      width: "152px",
-      height: "38px",
-    },
-    {
-      image: mastercard,
-      width: "92px",
-      height: "55px",
-    },
-    {
-      image: visa,
-      width: "112px",
-      height: "35px",
-    },
-  ];
 
   const initialValues = {
     user_name: "",
@@ -121,62 +100,29 @@ const ApplyOnlineForm = (props: ApplyOnlineFormProp) => {
 
       <Text>{price}</Text>
 
-      <Box>
-        <Flex
-          mt="50px"
-          alignItems="center"
-          gridTemplateColumns={{
-            sm: "auto auto",
+      <NextLink href={showCoursePrice.paymentLink} target="_blank">
+        <Button
+          type="submit"
+          fontFamily="Manrope"
+          fontSize="16px"
+          fontWeight="700"
+          m=" 30px 0"
+          w={{
+            sm: "100%",
+            md: "400px",
+            lg: "526px",
           }}
-          display={{
-            sm: "grid",
-            md: "flex",
-            lg: "flex",
-            xl: "flex",
-            "2xl": "flex",
+          bg="#021D37"
+          height="46.89px"
+          textAlign="center"
+          color="#FFF"
+          _hover={{
+            bg: "#020E1B",
           }}
         >
-          {payNow.map((pay, index) => {
-            return (
-              <PeaceImage
-                key={index}
-                src={pay.image}
-                alt="payment-method"
-                w={pay.width}
-                mx="10px"
-                mb="10px"
-                h={pay.height}
-              />
-            );
-          })}
-        </Flex>
-
-        <NextLink href={showCoursePrice.paymentLink} target="_blank">
-          <Button
-            type="submit"
-            fontFamily="Manrope"
-            fontSize="16px"
-            fontWeight="700"
-            m=" 30px 0"
-            w={{
-              sm: "100%",
-              md: "400px",
-              lg: "526px",
-              xl: "423px",
-              "2xl": "423px",
-            }}
-            bg="#021D37"
-            height="46.89px"
-            textAlign="center"
-            color="#FFF"
-            _hover={{
-              bg: "#020E1B",
-            }}
-          >
-            PAY NOW
-          </Button>
-        </NextLink>
-      </Box>
+          PAY NOW
+        </Button>
+      </NextLink>
     </form>
   );
 };

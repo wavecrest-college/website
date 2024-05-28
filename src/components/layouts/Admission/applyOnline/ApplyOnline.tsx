@@ -1,4 +1,4 @@
-import { Heading, Box, Text, Grid } from "@chakra-ui/react";
+import { Heading, Box,  Grid } from "@chakra-ui/react";
 import React, { useState } from "react";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
@@ -102,22 +102,6 @@ const ApplyOnline = () => {
           onChange={handleChange}
           showCoursePrice={showCoursePrice}
         />
-
-        <Text
-          fontFamily="Manrope"
-          fontSize={{
-            sm: "18px",
-            md: "24px",
-            lg: "24px",
-            xl: "24px",
-            "2xl": "24px",
-          }}
-          fontWeight="400"
-          my="45px"
-        >
-          NB: After payment, a google link would be sent to your mail to
-          complete the registration
-        </Text>
       </Box>
 
       <Grid
