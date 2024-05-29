@@ -8,7 +8,13 @@ import { contactConfig } from "./contact/config";
 import { contact } from "./contact/values";
 
 import { aboutConfig } from "./about/config";
-import { aboutMilestone, aboutProfile } from "./about/values";
+import {
+  aboutMilestone,
+  aboutProfile,
+  boardMembers,
+  managements,
+  allStaffs,
+} from "./about/values";
 
 export const combinedConstant = {
   home,
@@ -16,6 +22,9 @@ export const combinedConstant = {
   contact,
   aboutProfile,
   aboutMilestone,
+  boardMembers,
+  managements,
+  allStaffs,
 };
 
 export const combinedConfig = {

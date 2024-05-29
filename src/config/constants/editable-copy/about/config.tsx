@@ -12,8 +12,17 @@ import {
 } from "components/layouts/About/Profile/Gallery";
 import {
   MilestoneData,
-  MilestoneProp,
+  Milestones,
 } from "components/layouts/About/Milestone/Milestone";
+import {
+  ManagementType,
+  Managements,
+} from "components/layouts/About/OurTeam/Management";
+import {
+  BoardMember,
+  BoardMembers,
+} from "components/layouts/About/OurTeam/Board";
+import { AllStaffs, StaffType } from "components/layouts/About/OurTeam/Staff";
 
 const ourStory: EditableUIConfig<OurStoryProps> = {
   name: "ourStory",
@@ -141,7 +150,7 @@ export const gallery: EditableUIConfig<GalleryProp, GalleryImg> = {
   ],
 };
 
-export const milestone: EditableUIConfig<MilestoneProp, MilestoneData> = {
+export const milestone: EditableUIConfig<Milestones, MilestoneData> = {
   name: "milestone",
   title: "Edit Milestone",
   groupKey: "year",
@@ -155,6 +164,99 @@ export const milestone: EditableUIConfig<MilestoneProp, MilestoneData> = {
   ],
 };
 
+export const managements: EditableUIConfig<Managements, ManagementType> = {
+  name: "managements",
+  title: "Edit Management",
+  groupKey: "name",
+  emptyFormInitial: {
+    image: "/assets/imgs/empty-img.jpeg",
+    name: "",
+    post: "",
+  },
+  groupItems: [
+    {
+      label: "Add Image",
+      name: "image",
+      type: "image",
+    },
+    {
+      label: "Add Name",
+      name: "name",
+      type: "text",
+      placeholder: "Enter Management Name",
+      defaultValue: "",
+    },
+    {
+      label: "Add Post",
+      name: "post",
+      type: "text",
+      placeholder: "Enter Designation",
+    },
+  ],
+};
+
+export const boardMembers: EditableUIConfig<BoardMembers, BoardMember> = {
+  name: "boardMembers",
+  title: "Edit Board Members",
+  groupKey: "name",
+  emptyFormInitial: {
+    image: "/assets/imgs/empty-img.jpeg",
+    name: "",
+    post: "",
+  },
+  groupItems: [
+    {
+      label: "Add Image",
+      name: "image",
+      type: "image",
+    },
+    {
+      label: "Add Name",
+      name: "name",
+      type: "text",
+      placeholder: "Enter Board Member Name",
+      defaultValue: "",
+    },
+    {
+      label: "Add Post",
+      name: "post",
+      type: "text",
+      placeholder: "Enter Designation",
+    },
+  ],
+};
+
+export const mappedStaffCategory: EditableUIConfig<AllStaffs, StaffType> = {
+  name: "staffs",
+  title: "Edit Staff Members",
+  groupKey: "name",
+  emptyFormInitial: {
+    image: "/assets/imgs/empty-img.jpeg",
+    name: "",
+    post: "",
+  },
+  groupItems: [
+    {
+      label: "Add Image",
+      name: "image",
+      type: "image",
+    },
+    {
+      label: "Add Name",
+      name: "name",
+      type: "text",
+      placeholder: "Enter Staff Name",
+      defaultValue: "",
+    },
+    {
+      label: "Add Post",
+      name: "post",
+      type: "text",
+      placeholder: "",
+    },
+  ],
+};
+
 export const aboutConfig = {
   profile: {
     ourStory,
@@ -165,5 +267,14 @@ export const aboutConfig = {
   },
   milestones: {
     milestone,
+  },
+  managements: {
+    managements,
+  },
+  board: {
+    boardMembers,
+  },
+  staffs: {
+    mappedStaffCategory,
   },
 };

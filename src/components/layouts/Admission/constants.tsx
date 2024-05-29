@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import ApplyOnline from "./applyOnline/ApplyOnline";
 import AdmissionRequirements from "./admissionRequirements/AdmissionRequirements";
 import TuitionAndScholarship from "./tuitionAndScholarship/TuitionAndScholarship";
 import Hostel from "./hostel/Hostel";
@@ -12,7 +11,7 @@ export type MenuLink = {
   id: string;
   href: string;
   linkTitle: string;
-  content: ReactNode;
+  content: ReactNode | string;
 };
 
 export const menuLinks: MenuLink[] = [
@@ -30,9 +29,9 @@ export const menuLinks: MenuLink[] = [
   },
   {
     id: "applyOnline",
-    href: "/admission/applyOnline",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSdccA461mbp8ZmB-A_KzHWnnuvvxYmuWcoy9NHS4_4sOLRdqw/viewform",
     linkTitle: "APPLY ONLINE",
-    content: <ApplyOnline />,
+    content: "",
   },
   {
     id: "hostel",

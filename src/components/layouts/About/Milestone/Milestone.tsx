@@ -10,13 +10,15 @@ import MobileRedirect from "components/molecules/MobileRedirect";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import Editable from "components/organisms/Editable/Editable";
 import { combinedConfig } from "config/constants/editable-copy/combined";
+import { combinedConstant } from "config/constants/editable-copy/combined";
+import { useCopyData } from "contexts/EditableCopyContext";
 
 export type MilestoneData = {
   year: string;
   achievement: string[];
 };
 
-export type MilestoneProp = {
+export type Milestones = {
   milestones: MilestoneData[];
 };
 
@@ -31,8 +33,15 @@ const redirects = [
   },
 ];
 
-const Milestone = ({ milestones }: MilestoneProp) => {
+const Milestone = () => {
   const { aboutConfig } = combinedConfig;
+
+  const { data } = useCopyData();
+
+  const { milestones } = {
+    ...combinedConstant.aboutMilestone,
+    ...data.aboutMilestone,
+  };
 
   return (
     <Box>
