@@ -289,13 +289,6 @@ export default function OurStories({ stories }: OurStoriesProps) {
                   src={card.postsImg}
                   alt="ourstories"
                   objectFit="cover"
-                  // display={{
-                  //   sm: "block",
-                  //   md: "block",
-                  //   lg: "block",
-                  //   xl: "none",
-                  //   "2xl": "none",
-                  // }}
                   ml={{
                     xl: "-30px",
                     "2xl": "-30px",

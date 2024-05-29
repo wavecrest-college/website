@@ -33,7 +33,10 @@ export type EditableUIConfig<P = unknown, LItem = any> = (
     | "recognitions"
     | "gallery"
     | "ourStory"
-    | "milestone";
+    | "milestone"
+    | "managements"
+    | "boardMembers"
+    | "staffs";
   defaults?: P;
   title: string;
 };
