@@ -9,15 +9,20 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
-import { ProgrammesProps } from "../constants";
 import PeaceImage from "components/atoms/PeaceImage";
+import { ProgrammesData } from "./Programmes";
 
-const Program = (programme: ProgrammesProps) => {
+type ProgramProps = {
+  programme: ProgrammesData;
+  index: number;
+};
+
+const Program = ({ programme, index }: ProgramProps) => {
   const fileDownload = "/assets/imgs/fileDownload.png";
 
   return (
     <Box
-      bg={programme.background}
+      bg={index % 2 === 0 ? "#EBEDEF" : "#FFF"}
       py="75px"
       px={{
         sm: "20px",
@@ -126,9 +131,13 @@ const Program = (programme: ProgrammesProps) => {
             {programme.captionTime}
           </Text>
 
-          <NextLink href="/admission/applyOnline" legacyBehavior passHref>
+          <NextLink
+            href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}
+            legacyBehavior
+            passHref
+          >
             <Link
-              href="/admission/applyOnline"
+              href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}
               bg="#fff"
               color="#021d37"
               h="52px"
@@ -189,18 +198,7 @@ const Program = (programme: ProgrammesProps) => {
               fontSize="20px"
               my="20px"
             >
-              {programme.programmeDurationTime}
-            </Heading>
-
-            <Box bg="#021D37" w="2px" h="20px" m="auto 8px"></Box>
-
-            <Heading
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="20px"
-              my="20px"
-            >
-              {programme.programmeDurationYear}
+              {programme.captionTime}
             </Heading>
           </Flex>
 
@@ -210,10 +208,14 @@ const Program = (programme: ProgrammesProps) => {
             fontSize="18px"
             lineHeight="33px"
           >
-            {programme.responsiveDesc}
+            {programme.description}
           </Text>
 
-          <NextLink href="/admission/applyOnline" legacyBehavior passHref>
+          <NextLink
+            href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}
+            legacyBehavior
+            passHref
+          >
             <Button
               w="142px"
               height="46.89px"

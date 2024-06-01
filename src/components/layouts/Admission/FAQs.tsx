@@ -27,7 +27,7 @@ const FAQs = () => {
     },
     {
       name: "APPLY ONLINE",
-      href: "/admission/applyOnline",
+      href: process.env.NEXT_PUBLIC_APPLY_NOW_URL as string,
     },
     {
       name: "HOSTEL",

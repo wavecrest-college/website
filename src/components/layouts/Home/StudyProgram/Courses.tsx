@@ -152,7 +152,7 @@ const Courses = () => {
                       </Text>
 
                       <Link
-                        href="/admission/applyOnline"
+                        href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}
                         borderRadius="5px"
                         fontFamily="Manrope"
                         fontWeight="700"

@@ -26,7 +26,9 @@ type EditableProps = {
     | "aboutMilestone"
     | "managements"
     | "boardMembers"
-    | "allStaffs";
+    | "allStaffs"
+    | "trainings"
+    | "programmes";
 };
 const Editable = (props: EditableProps) => {
   const { page, children, defaultValues, config } = props;

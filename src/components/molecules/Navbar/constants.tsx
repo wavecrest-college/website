@@ -98,7 +98,7 @@ export const navLinks = [
       },
       {
         name: "APPLY ONLINE",
-        to: "https://docs.google.com/forms/d/e/1FAIpQLSdccA461mbp8ZmB-A_KzHWnnuvvxYmuWcoy9NHS4_4sOLRdqw/viewform",
+        to: process.env.NEXT_PUBLIC_APPLY_NOW_URL,
       },
       {
         name: "HOSTEL",

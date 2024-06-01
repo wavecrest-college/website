@@ -128,7 +128,11 @@ const StudyProgrammes = () => {
                 pt="40px"
                 pb="20px"
               >
-                <NextLink href="/admission/applyOnline" legacyBehavior passHref>
+                <NextLink
+                  href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}
+                  legacyBehavior
+                  passHref
+                >
                   <Heading
                     color="#fff"
                     fontWeight="700"
@@ -153,7 +157,11 @@ const StudyProgrammes = () => {
                   {value.captionTime}
                 </Text>
 
-                <NextLink href="/admission/applyOnline" legacyBehavior passHref>
+                <NextLink
+                  href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}
+                  legacyBehavior
+                  passHref
+                >
                   <Text
                     bg="#fff"
                     color="#021d37"

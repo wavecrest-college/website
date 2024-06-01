@@ -121,7 +121,7 @@ const ShortCourses = () => {
                             </Text>
 
                             <NextLink
-                              href="/admission/applyOnline"
+                              href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}
                               legacyBehavior
                               passHref
                             >
