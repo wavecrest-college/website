@@ -36,7 +36,9 @@ export type EditableUIConfig<P = unknown, LItem = any> = (
     | "milestone"
     | "managements"
     | "boardMembers"
-    | "staffs";
+    | "staffs"
+    | "trainings"
+    | "programmes";
   defaults?: P;
   title: string;
 };

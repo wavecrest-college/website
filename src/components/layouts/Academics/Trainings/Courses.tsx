@@ -17,18 +17,23 @@ import React from "react";
 import { FaFileDownload } from "react-icons/fa";
 import JsFileDownloader from "js-file-downloader";
 import NextLink from "next/link";
-import { Trainings } from "../constants";
 import PeaceImage from "components/atoms/PeaceImage";
+import { TrainingData } from "./Training";
 
 const fileDownload = "/assets/imgs/paperDownload.png";
 const trainingCert = "/assets/imgs/trainingCert.png";
 
-const Courses = (training: Trainings) => {
+type CoursesType = {
+  training: TrainingData;
+  index: number;
+};
+
+const Courses = ({ training, index }: CoursesType) => {
   const { isOpen, onClose } = useDisclosure();
 
   return (
     <Box
-      bg={training.background}
+      bg={index % 2 === 0 ? "#EBEDEF" : "#FFF"}
       p={{
         sm: "40px 20px",
         md: "40px 40px",
@@ -256,7 +261,7 @@ const Courses = (training: Trainings) => {
             </Link>
           </Flex>
 
-          <NextLink href="/admission/applyOnline">
+          <NextLink href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}>
             <Button
               display="block"
               w="142px"

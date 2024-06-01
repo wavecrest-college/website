@@ -196,7 +196,7 @@ const ProgrammeDesc = (props: ProgrammeDescProps) => {
           }}
         >
           <Link
-            href="/admission/applyOnline"
+            href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}
             bg="#021D37"
             color="#FFF"
             h="52px"

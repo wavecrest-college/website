@@ -29,7 +29,7 @@ export const menuLinks: MenuLink[] = [
   },
   {
     id: "applyOnline",
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSdccA461mbp8ZmB-A_KzHWnnuvvxYmuWcoy9NHS4_4sOLRdqw/viewform",
+    href: process.env.NEXT_PUBLIC_APPLY_NOW_URL as string,
     linkTitle: "APPLY ONLINE",
     content: "",
   },
@@ -99,7 +99,7 @@ export const redirects = [
   },
   {
     name: "APPLY ONLINE",
-    href: "/admission/applyOnline",
+    href: process.env.NEXT_PUBLIC_APPLY_NOW_URL as string,
   },
   {
     name: "HOSTEL",
@@ -307,7 +307,7 @@ export const questions = [
   {
     question: "Can I apply online?",
     answer:
-      "Yes. You can purchase the Application form online by request. Contact (09096856606) or Click here: <a href='https://wavecrest.edu.ng/admission/applyOnline' style='color:blue' >Apply Now </a> <br /> <br /> <ul><li> Application form for Gap-Year Program / National Diploma: N2,000</li><li> Application form for Higher National Diploma: N2,500</li></ul>",
+      "Yes. You can purchase the Application form online by request. Contact (09096856606) or Click here: <a href='https://wavecrest.edu.nghttps://docs.google.com/forms/d/e/1FAIpQLSdccA461mbp8ZmB-A_KzHWnnuvvxYmuWcoy9NHS4_4sOLRdqw/viewform' style='color:blue' >Apply Now </a> <br /> <br /> <ul><li> Application form for Gap-Year Program / National Diploma: N2,000</li><li> Application form for Higher National Diploma: N2,500</li></ul>",
   },
   {
     question: "Do the HND students go for NYSC?",

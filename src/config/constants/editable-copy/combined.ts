@@ -15,6 +15,8 @@ import {
   managements,
   allStaffs,
 } from "./about/values";
+import { programmes, trainings } from "./academics/values";
+import { academicsConfig } from "./academics/config";
 
 export const combinedConstant = {
   home,
@@ -25,6 +27,8 @@ export const combinedConstant = {
   boardMembers,
   managements,
   allStaffs,
+  trainings,
+  programmes,
 };
 
 export const combinedConfig = {
@@ -32,4 +36,5 @@ export const combinedConfig = {
   homeConfig,
   sharedConfig,
   aboutConfig,
+  academicsConfig,
 };

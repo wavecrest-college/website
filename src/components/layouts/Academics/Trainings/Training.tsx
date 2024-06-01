@@ -1,10 +1,28 @@
 import { Flex, Grid } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import { trainings } from "../constants";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import MobileRedirect from "components/molecules/MobileRedirect";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import Courses from "./Courses";
+import Editable from "components/organisms/Editable/Editable";
+import { useCopyData } from "contexts/EditableCopyContext";
+import { combinedConfig } from "config/constants/editable-copy/combined";
+import { combinedConstant } from "config/constants/editable-copy/combined";
+
+export type TrainingData = {
+  trainingsTitle?: string;
+  trainingsImage: string;
+  trainingDurationTime?: string;
+  trainingDurationYear?: string;
+  trainingsText?: string;
+  downloadBrochure?: string;
+  button?: string;
+  fileUrl?: string;
+};
+
+export type TrainingType = {
+  trainings: TrainingData[];
+};
 
 const Training = () => {
   const mobileLinks = [
@@ -21,6 +39,16 @@ const Training = () => {
       href: "/academics/nysc",
     },
   ];
+
+  const { academicsConfig } = combinedConfig;
+
+  const { data } = useCopyData();
+
+  const { allTrainings } = {
+    ...combinedConstant.trainings,
+    ...data.trainings,
+  };
+
   return (
     <Fragment>
       <MobileSideBar />
@@ -30,11 +58,17 @@ const Training = () => {
         title="TRAINING"
       />
 
-      <Flex flexDirection="column" mb="70px">
-        {trainings.map((training, index) => {
-          return <Courses key={index} {...training} />;
-        })}
-      </Flex>
+      <Editable
+        defaultValues={allTrainings}
+        config={academicsConfig.trainings.training}
+        page="trainings"
+      >
+        <Flex flexDirection="column" mb="70px">
+          {allTrainings.map((training, index) => {
+            return <Courses key={index} index={index} training={training} />;
+          })}
+        </Flex>
+      </Editable>
 
       <Grid
         justifyContent="center"
