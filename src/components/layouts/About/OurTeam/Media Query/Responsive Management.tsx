@@ -22,7 +22,7 @@ const ResponsiveManagement = () => {
       <TeamSection teamSectionTitle="Managements" />
       <Editable
         defaultValues={management}
-        config={aboutConfig.managements.managements}
+        config={aboutConfig.team.managements}
         page="managements"
       >
         <Flex overflowY="scroll">

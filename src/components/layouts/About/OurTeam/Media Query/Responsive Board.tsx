@@ -23,7 +23,7 @@ const ResponsiveBoard = () => {
 
       <Editable
         defaultValues={boards}
-        config={aboutConfig.board.boardMembers}
+        config={aboutConfig.team.boardMembers}
         page="boardMembers"
       >
         <Flex overflowY="scroll">

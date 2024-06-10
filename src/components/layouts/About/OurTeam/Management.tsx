@@ -69,7 +69,7 @@ const Management = () => {
 
       <Editable
         defaultValues={management}
-        config={aboutConfig.managements.managements}
+        config={aboutConfig.team.managements}
         page="managements"
       >
         <Flex

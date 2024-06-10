@@ -226,7 +226,7 @@ export const boardMembers: EditableUIConfig<BoardMembers, BoardMember> = {
   ],
 };
 
-export const mappedStaffCategory: EditableUIConfig<AllStaffs, StaffType> = {
+export const staff: EditableUIConfig<AllStaffs, StaffType> = {
   name: "staffs",
   title: "Edit Staff Members",
   groupKey: "name",
@@ -237,7 +237,7 @@ export const mappedStaffCategory: EditableUIConfig<AllStaffs, StaffType> = {
   },
   groupItems: [
     {
-      label: "Add Image",
+      label: "Add Image URL",
       name: "image",
       type: "image",
     },
@@ -252,7 +252,7 @@ export const mappedStaffCategory: EditableUIConfig<AllStaffs, StaffType> = {
       label: "Add Post",
       name: "post",
       type: "text",
-      placeholder: "",
+      placeholder: "Enter Staff Designation",
     },
   ],
 };
@@ -268,13 +268,9 @@ export const aboutConfig = {
   milestones: {
     milestone,
   },
-  managements: {
+  team: {
     managements,
-  },
-  board: {
     boardMembers,
-  },
-  staffs: {
-    mappedStaffCategory,
+    staff,
   },
 };

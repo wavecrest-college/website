@@ -1,65 +1,40 @@
-import { Box, Grid, Heading, Flex, Text } from "@chakra-ui/react";
+import { Box, Heading, Grid, Flex, Text } from "@chakra-ui/react";
 import PeaceImage from "components/atoms/PeaceImage";
-import Editable from "components/organisms/Editable/Editable";
 import { combinedConfig } from "config/constants/editable-copy/combined";
 import { useCopyData } from "contexts/EditableCopyContext";
+import React, { Fragment } from "react";
 import { combinedConstant } from "config/constants/editable-copy/combined";
-import React from "react";
+import Editable from "components/organisms/Editable/Editable";
 
-export type BoardMember = {
-  image: string;
-  name: string;
-  post: string;
-};
-
-export type BoardMembers = {
-  board: BoardMember[];
-};
-const Board = () => {
+const AcademicStaffs = () => {
   const { aboutConfig } = combinedConfig;
 
   const { data } = useCopyData();
 
-  const { boards } = {
-    ...combinedConstant.boardMembers,
-    ...data.boardMembers,
+  const { academicStaffs } = {
+    ...combinedConstant.allStaffs,
+    ...data.allStaffs,
   };
 
   return (
-    <Box>
-      <Box>
-        <Box
-          w="88px"
-          h="3px"
-          bg="#021D37"
-          mb="5px"
-          display={{
-            sm: "block",
-            md: "block",
-            lg: "block",
-            xl: "none",
-            "2xl": "none",
-          }}
-        ></Box>
-
-        <Heading
-          fontFamily="Playfair Display"
-          fontSize="32px"
-          fontWeight="700"
-          color="#021D37"
-          mb="30px"
-        >
-          Board
-        </Heading>
-      </Box>
+    <Fragment>
+      <Heading
+        fontFamily="Playfair Display"
+        fontSize="32px"
+        fontWeight="700"
+        color="#021D37"
+        mb="30px"
+      >
+        Academic Staff
+      </Heading>
 
       <Editable
-        defaultValues={boards}
-        config={aboutConfig.team.boardMembers}
-        page="boardMembers"
+        defaultValues={academicStaffs}
+        config={aboutConfig.team.staff}
+        page="allStaffs"
       >
         <Grid
-          gridTemplateColumns="1fr 1fr 1fr 1fr"
+          gridTemplateColumns="1fr 1fr 1fr"
           gridGap="8px"
           mb="100px"
           display={{
@@ -70,24 +45,22 @@ const Board = () => {
             "2xl": "grid",
           }}
         >
-          {boards.map((board, index) => {
+          {academicStaffs.map((staff, index) => {
             return (
-              <Box key={index} w={{ xl: "260px", "2xl": "260px" }}>
+              <Box key={index} w={{ xl: "350px", "2xl": "350px" }}>
                 <PeaceImage
-                  src={board.image}
-                  alt="board"
+                  src={staff.image}
+                  alt="staff"
                   w="100%"
-                  h="250px"
+                  h="350px"
                   borderRadius="5px"
                 />
-
                 <Flex
                   alignItems="center"
-                  bg="rgba(255, 255, 255, 67%)"
+                  bg="rgba(255, 255, 255, 77%)"
                   p="10px 25px"
                   position="relative"
-                  h="70px"
-                  top="-70px"
+                  top="-67px"
                   borderRadius="0px 0px 5px 5px"
                 >
                   <Box
@@ -102,11 +75,11 @@ const Board = () => {
                   <Box ml="10px">
                     <Heading
                       fontFamily="Playfair Display"
-                      fontSize={{ xl: "18px", "2xl": "22px" }}
+                      fontSize="22px"
                       fontWeight="700"
                       color="#021D37"
                     >
-                      {board.name}
+                      {staff.name}
                     </Heading>
                     <Text
                       fontFamily="Manrope"
@@ -114,7 +87,7 @@ const Board = () => {
                       fontWeight="400"
                       color="rgba(2, 29, 55, 0.63);"
                     >
-                      {board.post}
+                      {staff.post}
                     </Text>
                   </Box>
                 </Flex>
@@ -123,8 +96,8 @@ const Board = () => {
           })}
         </Grid>
       </Editable>
-    </Box>
+    </Fragment>
   );
 };
 
-export default Board;
+export default AcademicStaffs;
