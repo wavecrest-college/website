@@ -47,12 +47,12 @@ const AcademicStaffs = () => {
         >
           {academicStaffs.map((staff, index) => {
             return (
-              <Box key={index} w={{ xl: "350px", "2xl": "350px" }}>
+              <Box key={index} w={{ xl: "300px", "2xl": "300px" }}>
                 <PeaceImage
                   src={staff.image}
                   alt="staff"
                   w="100%"
-                  h="350px"
+                  h="300px"
                   borderRadius="5px"
                 />
                 <Flex
