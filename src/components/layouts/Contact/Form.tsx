@@ -11,20 +11,21 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment, SyntheticEvent, useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import { initialValues, contactFields } from "./constants";
-import { SERVICE_ID, SITE_KEY, TEMPLATE_ID } from "config/settings";
+import { SERVICE_ID, TEMPLATE_ID } from "config/settings";
+// import { SERVICE_ID, SITE_KEY, TEMPLATE_ID } from "config/settings";
 
 const Form = () => {
   const toast = useToast();
 
   const [inputField, setInputField] = useState(initialValues as any);
 
-  const [recpatchaValue, setRecpatchaValue] = useState<string | null>(null);
+  // const [recpatchaValue, setRecpatchaValue] = useState<string | null>(null);
 
-  const handleRecaptchaChange = (value: string | null) => {
-    setRecpatchaValue(value);
-  };
+  // const handleRecaptchaChange = (value: string | null) => {
+  //   setRecpatchaValue(value);
+  // };
 
   const inputValues = (e: any) => {
     setInputField({
@@ -36,10 +37,10 @@ const Form = () => {
   const sendEmail = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    if (!recpatchaValue) {
-      alert("You have not solved the captcha...");
-      return;
-    }
+    // if (!recpatchaValue) {
+    //   alert("You have not solved the captcha...");
+    //   return;
+    // }
 
     const res = await emailjs.sendForm(
       SERVICE_ID,
@@ -157,7 +158,7 @@ const Form = () => {
             }}
           />
         </Stack>
-        <ReCAPTCHA sitekey={SITE_KEY} onChange={handleRecaptchaChange} />
+        {/* <ReCAPTCHA sitekey={SITE_KEY} onChange={handleRecaptchaChange} /> */}
         <Button
           type="submit"
           w="142px"

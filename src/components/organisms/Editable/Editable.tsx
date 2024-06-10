@@ -38,7 +38,7 @@ const Editable = (props: EditableProps) => {
   const [editable, setEditable] = useState(false);
 
   const [images, setImages] = useState<Record<string, string>>({});
-  const [iamgesChanged, setImagesChanged] = useState<string[]>([]);
+  const [imagesChanged, setImagesChanged] = useState<string[]>([]);
   const [uploadingImages, setUploadingImages] = useState<string[]>([]);
   useEffect(() => {
     if (router.pathname) {
@@ -82,7 +82,9 @@ const Editable = (props: EditableProps) => {
       [config.name as any]: newDataValues,
     } as any;
 
-    mutate?.(page, finalData, iamgesChanged);
+    mutate?.(page, finalData, imagesChanged);
+
+    console.log({ page, finalData, imagesChanged });
 
     setImagesChanged([]);
     setImages({});
