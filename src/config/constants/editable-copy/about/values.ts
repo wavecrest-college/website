@@ -337,6 +337,16 @@ const academicStaffs = [
     post: "Lecturer / Workshop Co-ordinator",
   },
   {
+    image: "/assets/imgs/academicstaff/patricia.jpg",
+    name: "Patricia Igbojanu",
+    post: "Lecturer",
+  },
+  {
+    image: "/assets/imgs/academicstaff/fisayo.jpg",
+    name: "Oluwafisayo Okafor",
+    post: "Food and Beverage Lecturer",
+  },
+  {
     image: "/assets/imgs/academicstaff/eboagwu.jpeg",
     name: "Eboagwu Helen",
     post: "Facility Lecturer",
@@ -408,6 +418,16 @@ const nonAcademicStaff = [
     image: "/assets/imgs/nonAcademicStaff/precious.png",
     name: "Precious Ebung",
     post: "Front Desk Personnel",
+  },
+  {
+    image: "/assets/imgs/nonAcademicStaff/florence.jpg",
+    name: "Florence Abarikwu",
+    post: "Alumni Officer",
+  },
+  {
+    image: "/assets/imgs/nonAcademicStaff/anthonia.jpg",
+    name: "Anthonia Adi",
+    post: "Admin Officer",
   },
   {
     image: "/assets/imgs/nonAcademicStaff/Baptista.jpg",
