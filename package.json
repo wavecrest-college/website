@@ -34,7 +34,7 @@
     "dev": "next dev",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "build": "next build",
+    "build": "npm install && cross-env NODE_PATH=src next build",
     "start": "next start"
   },
   "eslintConfig": {
