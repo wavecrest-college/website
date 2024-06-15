@@ -84,8 +84,6 @@ const Editable = (props: EditableProps) => {
 
     mutate?.(page, finalData, imagesChanged);
 
-    console.log({ page, finalData, imagesChanged });
-
     setImagesChanged([]);
     setImages({});
   };

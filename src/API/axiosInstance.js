@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const axiosInstance = axios.create({
-  baseURL: 'https://wave-crest-backend.herokuapp.com/'
+  baseURL: 'https://www.wavecrest.edu.ng/'
 })
