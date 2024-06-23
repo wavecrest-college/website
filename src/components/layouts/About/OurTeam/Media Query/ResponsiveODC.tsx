@@ -15,6 +15,7 @@ const ResponsiveODC = () => {
     ...combinedConstant.allStaffs,
     ...data.allStaffs,
   };
+
   return (
     <Editable
       defaultValues={odc}

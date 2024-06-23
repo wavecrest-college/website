@@ -15,6 +15,7 @@ const ResponsiveNonAcademicStaff = () => {
     ...combinedConstant.allStaffs,
     ...data.allStaffs,
   };
+
   return (
     <Editable
       defaultValues={nonAcademicStaff}

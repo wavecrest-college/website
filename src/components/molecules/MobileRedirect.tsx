@@ -18,7 +18,7 @@ const MobileRedirect = ({ pageURL, pageName }: MobileRedirectProps) => (
       "2xl": "none",
     }}
   >
-    <NextLink href={pageURL} passHref legacyBehavior>
+    <NextLink href={String(pageURL)} passHref legacyBehavior>
       <Button
         fontFamily="Manrope"
         fontSize="18px"

@@ -11,9 +11,11 @@ import { aboutConfig } from "./about/config";
 import {
   aboutMilestone,
   aboutProfile,
+  allStaffs,
   boardMembers,
   managements,
-  allStaffs,
+  // nonAcademicStaff,
+  // odc,
 } from "./about/values";
 import { programmes, trainings } from "./academics/values";
 import { academicsConfig } from "./academics/config";
@@ -23,10 +25,12 @@ export const combinedConstant = {
   shared,
   contact,
   aboutProfile,
+  allStaffs,
   aboutMilestone,
   boardMembers,
   managements,
-  allStaffs,
+  // nonAcademicStaff,
+  // odc,
   trainings,
   programmes,
 };

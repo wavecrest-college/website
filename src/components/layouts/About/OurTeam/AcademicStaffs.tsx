@@ -11,7 +11,7 @@ const AcademicStaffs = () => {
 
   const { data } = useCopyData();
 
-  const { academicStaffs } = {
+  const { staffs } = {
     ...combinedConstant.allStaffs,
     ...data.allStaffs,
   };
@@ -29,7 +29,7 @@ const AcademicStaffs = () => {
       </Heading>
 
       <Editable
-        defaultValues={academicStaffs}
+        defaultValues={staffs}
         config={aboutConfig.team.staff}
         page="allStaffs"
       >
@@ -45,7 +45,7 @@ const AcademicStaffs = () => {
             "2xl": "grid",
           }}
         >
-          {academicStaffs.map((staff, index) => {
+          {staffs.map((staff, index) => {
             return (
               <Box key={index} w={{ xl: "300px", "2xl": "300px" }}>
                 <PeaceImage

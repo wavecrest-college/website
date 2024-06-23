@@ -117,11 +117,11 @@ const Editable = (props: EditableProps) => {
 
         const { url } = await response.json();
 
+        const formData = new FormData();
+        formData.append("file", imgFile);
+
         await fetch(url, {
           method: "PUT",
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
           body: imgFile,
         });
 

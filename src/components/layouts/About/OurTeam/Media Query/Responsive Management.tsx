@@ -12,7 +12,7 @@ const ResponsiveManagement = () => {
 
   const { data } = useCopyData();
 
-  const { management } = {
+  const { managements } = {
     ...combinedConstant.managements,
     ...data.managements,
   };
@@ -21,12 +21,12 @@ const ResponsiveManagement = () => {
     <Box position={"relative"} overflow={"hidden"}>
       <TeamSection teamSectionTitle="Managements" />
       <Editable
-        defaultValues={management}
+        defaultValues={managements}
         config={aboutConfig.team.managements}
         page="managements"
       >
         <Flex overflowY="scroll">
-          {management.map((management, index) => (
+          {managements.map((management, index) => (
             <Box key={index}>
               <Box w="300px">
                 <PeaceImage
