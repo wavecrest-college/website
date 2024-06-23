@@ -12,7 +12,7 @@ const ResponsiveBoard = () => {
 
   const { data } = useCopyData();
 
-  const { boards } = {
+  const { boardMembers } = {
     ...combinedConstant.boardMembers,
     ...data.managements,
   };
@@ -22,12 +22,12 @@ const ResponsiveBoard = () => {
       <TeamSection teamSectionTitle="Board" />
 
       <Editable
-        defaultValues={boards}
+        defaultValues={boardMembers}
         config={aboutConfig.team.boardMembers}
         page="boardMembers"
       >
         <Flex overflowY="scroll">
-          {boards.map((board, index) => (
+          {boardMembers.map((board, index) => (
             <Box key={index}>
               <Box w="400px" h="300px" borderRadius="0px 0px 5px 5px">
                 <PeaceImage

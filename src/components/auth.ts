@@ -35,8 +35,6 @@ export class Auth {
   }
 
   signIn(email: string, password: string, delay = 2000) {
-    console.log(`Sign in with email: ${email} password: ${password}`);
-
     return new Promise((resolve, reject) => {
       if (email !== userEmail || password !== userPassword) {
         const error = { message: "Wrong email or password" };

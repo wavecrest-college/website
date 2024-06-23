@@ -25,7 +25,7 @@ const Management = () => {
 
   const { data } = useCopyData();
 
-  const { management } = {
+  const { managements } = {
     ...combinedConstant.managements,
     ...data.managements,
   };
@@ -68,20 +68,27 @@ const Management = () => {
       </Heading>
 
       <Editable
-        defaultValues={management}
+        defaultValues={managements}
         config={aboutConfig.team.managements}
         page="managements"
       >
-        <Flex
+        <Box
           display={{
             sm: "none",
             md: "none",
             lg: "none",
-            xl: "flex",
-            "2xl": "flex",
+            xl: "grid",
+            "2xl": "grid",
+          }}
+          gridTemplateColumns={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "repeat(4, auto)",
+            "2xl": "repeat(4, auto)",
           }}
         >
-          {management.map((management, index) => {
+          {managements.map((management, index) => {
             return (
               <Box
                 key={index}
@@ -135,7 +142,7 @@ const Management = () => {
               </Box>
             );
           })}
-        </Flex>
+        </Box>
       </Editable>
 
       <Box

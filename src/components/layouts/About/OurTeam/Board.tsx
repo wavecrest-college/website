@@ -20,7 +20,7 @@ const Board = () => {
 
   const { data } = useCopyData();
 
-  const { boards } = {
+  const { boardMembers } = {
     ...combinedConstant.boardMembers,
     ...data.boardMembers,
   };
@@ -54,7 +54,7 @@ const Board = () => {
       </Box>
 
       <Editable
-        defaultValues={boards}
+        defaultValues={boardMembers}
         config={aboutConfig.team.boardMembers}
         page="boardMembers"
       >
@@ -70,7 +70,7 @@ const Board = () => {
             "2xl": "grid",
           }}
         >
-          {boards.map((board, index) => {
+          {boardMembers.map((board, index) => {
             return (
               <Box key={index} w={{ xl: "260px", "2xl": "260px" }}>
                 <PeaceImage

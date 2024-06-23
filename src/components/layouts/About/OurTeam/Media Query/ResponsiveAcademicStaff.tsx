@@ -11,13 +11,13 @@ const ResponsiveAcademicStaff = () => {
 
   const { data } = useCopyData();
 
-  const { academicStaffs } = {
+  const { staffs } = {
     ...combinedConstant.allStaffs,
     ...data.allStaffs,
   };
   return (
     <Editable
-      defaultValues={academicStaffs}
+      defaultValues={staffs}
       config={aboutConfig.team.staff}
       page="allStaffs"
     >
@@ -35,7 +35,7 @@ const ResponsiveAcademicStaff = () => {
         </Heading>
 
         <Flex overflowX="auto" gap="20px">
-          {academicStaffs.map((item, index) => {
+          {staffs.map((item, index) => {
             return (
               <Box key={index}>
                 <Box w="350px">

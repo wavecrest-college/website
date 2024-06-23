@@ -8,7 +8,7 @@ module.exports = {
   images: {
     domains: [
       "res.cloudinary.com",
-      "wavecrest-website-images.s3.eu-west-2.amazonaws.com",
+      "wavecrest-college-website-images-2.s3.eu-west-2.amazonaws.com",
     ],
   },
 

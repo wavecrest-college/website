@@ -493,15 +493,15 @@ export const aboutMilestone = {
 };
 
 export const managements = {
-  management,
+  managements: management,
 };
 
 export const boardMembers = {
-  boards,
+  boardMembers: boards,
 };
 
 export const allStaffs = {
-  academicStaffs,
+  staffs: academicStaffs,
   nonAcademicStaff,
   odc,
 };
