@@ -226,9 +226,69 @@ export const boardMembers: EditableUIConfig<BoardMembers, BoardMember> = {
   ],
 };
 
-export const staff: EditableUIConfig<AllStaffs, StaffType> = {
-  name: "staffs",
-  title: "Edit Staff Members",
+export const academicStaff: EditableUIConfig<AllStaffs, StaffType> = {
+  name: "academicStaffs",
+  title: "Edit Academic Staff Members",
+  groupKey: "name",
+  emptyFormInitial: {
+    image: "/assets/imgs/empty-img.jpeg",
+    name: "",
+    post: "",
+  },
+  groupItems: [
+    {
+      label: "Add Image URL",
+      name: "image",
+      type: "image",
+    },
+    {
+      label: "Add Name",
+      name: "name",
+      type: "text",
+      placeholder: "Enter Staff Name",
+      defaultValue: "",
+    },
+    {
+      label: "Add Post",
+      name: "post",
+      type: "text",
+      placeholder: "Enter Staff Designation",
+    },
+  ],
+};
+export const nonAcademicStaff: EditableUIConfig<AllStaffs, StaffType> = {
+  name: "nonAcademicStaffs",
+  title: "Edit Non Academic Staff Members",
+  groupKey: "name",
+  emptyFormInitial: {
+    image: "/assets/imgs/empty-img.jpeg",
+    name: "",
+    post: "",
+  },
+  groupItems: [
+    {
+      label: "Add Image URL",
+      name: "image",
+      type: "image",
+    },
+    {
+      label: "Add Name",
+      name: "name",
+      type: "text",
+      placeholder: "Enter Staff Name",
+      defaultValue: "",
+    },
+    {
+      label: "Add Post",
+      name: "post",
+      type: "text",
+      placeholder: "Enter Staff Designation",
+    },
+  ],
+};
+export const odc: EditableUIConfig<AllStaffs, StaffType> = {
+  name: "odc",
+  title: "Edit ODC Members",
   groupKey: "name",
   emptyFormInitial: {
     image: "/assets/imgs/empty-img.jpeg",
@@ -271,6 +331,8 @@ export const aboutConfig = {
   team: {
     managements,
     boardMembers,
-    staff,
+    academicStaff,
+    nonAcademicStaff,
+    odc,
   },
 };
