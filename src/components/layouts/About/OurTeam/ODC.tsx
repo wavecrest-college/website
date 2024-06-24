@@ -16,6 +16,8 @@ const ODC = () => {
     ...data.allStaffs,
   };
 
+  console.log("")
+
   return (
     <Box>
       <Fragment>
@@ -31,7 +33,7 @@ const ODC = () => {
 
         <Editable
           defaultValues={odc}
-          config={aboutConfig.team.staff}
+          config={aboutConfig.team.odc}
           page="allStaffs"
         >
           <Grid

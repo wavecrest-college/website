@@ -19,7 +19,7 @@ const ResponsiveODC = () => {
   return (
     <Editable
       defaultValues={odc}
-      config={aboutConfig.team.staff}
+      config={aboutConfig.team.odc}
       page="allStaffs"
     >
       <Flex height="400px">

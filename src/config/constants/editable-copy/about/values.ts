@@ -501,7 +501,7 @@ export const boardMembers = {
 };
 
 export const allStaffs = {
-  staffs: academicStaffs,
-  nonAcademicStaff,
-  odc,
+  academicStaffs: academicStaffs,
+  nonAcademicStaffs: nonAcademicStaff,
+  odc: odc,
 };

@@ -11,15 +11,15 @@ const ResponsiveNonAcademicStaff = () => {
 
   const { data } = useCopyData();
 
-  const { nonAcademicStaff } = {
+  const { nonAcademicStaffs } = {
     ...combinedConstant.allStaffs,
     ...data.allStaffs,
   };
 
   return (
     <Editable
-      defaultValues={nonAcademicStaff}
-      config={aboutConfig.team.staff}
+      defaultValues={nonAcademicStaffs}
+      config={aboutConfig.team.nonAcademicStaff}
       page="allStaffs"
     >
       <Flex my="20px" h="400px">
@@ -38,7 +38,7 @@ const ResponsiveNonAcademicStaff = () => {
         </Heading>
 
         <Flex overflowX="auto">
-          {nonAcademicStaff.map((item, index) => {
+          {nonAcademicStaffs.map((item, index) => {
             return (
               <Box key={index}>
                 <Box w="350px">
