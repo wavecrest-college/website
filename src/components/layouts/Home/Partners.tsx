@@ -24,10 +24,10 @@ export type PartnersImgCard = {
 };
 
 export type PartnersProps = {
-  defaultPartnersLogos: PartnersImgCard[];
+  partnersAndSponsors: PartnersImgCard[];
 };
 
-export default function Partners({ defaultPartnersLogos }: PartnersProps) {
+export default function Partners({ partnersAndSponsors }: PartnersProps) {
   const [slider, setSlider] = React.useState<Slider>();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
@@ -131,7 +131,7 @@ export default function Partners({ defaultPartnersLogos }: PartnersProps) {
           ref={(slider) => setSlider(slider as Slider)}
           pauseOnFocus
         >
-          {defaultPartnersLogos.map((card, index) => (
+          {partnersAndSponsors.map((card, index) => (
             <Box key={index} padding="30px">
               <PeaceImage
                 src={card.image}

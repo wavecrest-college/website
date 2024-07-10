@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { BLOGS, CATEGORIES } from "data/blog";
+import { CATEGORIES } from "data/blog";
 import { useRouter } from "next/router";
 import BlogSideBar from "components/molecules/BlogSideBar";
 import Header from "components/molecules/Header/Header";
@@ -10,6 +10,7 @@ import PagesBanner from "components/molecules/PagesBanner";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import Footer from "components/organisms/Footer/Footer";
 import Blog from "./Blog";
+import { BLOGS } from "config/constants/editable-copy/blog/values";
 
 const BlogpageLayout = () => {
   const blogs = BLOGS;
@@ -18,8 +19,8 @@ const BlogpageLayout = () => {
 
   const router = useRouter();
 
-  const ShowPosts = (post: any) => {
-    router.push(`/posts/${post.postId}`);
+  const ShowPosts = (postId: string) => {
+    router.push(`/posts/${postId}`);
   };
 
   return (
@@ -46,7 +47,7 @@ const BlogpageLayout = () => {
             ShowPosts={ShowPosts}
           />
 
-          <Blog />
+          <Blog currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} />
         </Flex>
       </Flex>
 

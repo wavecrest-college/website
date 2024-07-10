@@ -51,7 +51,6 @@ export default function EditFormModal(props: EditFormModalProps) {
       <ModalContent>
         <ModalHeader>{config.title}</ModalHeader>
         <ModalCloseButton />
-
         {"fields" in config && (
           <SingleItemFormControl
             initialRef={initialRef}
@@ -64,7 +63,6 @@ export default function EditFormModal(props: EditFormModalProps) {
             onClose={onClose}
           />
         )}
-
         {"groupItems" in config && (
           <GroupFormControl
             emptyFormInitial={config.emptyFormInitial}

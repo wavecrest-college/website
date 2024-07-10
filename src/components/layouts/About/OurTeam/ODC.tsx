@@ -16,8 +16,6 @@ const ODC = () => {
     ...data.allStaffs,
   };
 
-  console.log("")
-
   return (
     <Box>
       <Fragment>

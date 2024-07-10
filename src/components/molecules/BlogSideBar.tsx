@@ -9,19 +9,28 @@ import {
   Heading,
   InputGroup,
 } from "@chakra-ui/react";
+import {
+  blogCategories,
+  BlogCategory,
+  Blogs,
+} from "components/layouts/Blog/Blog";
 
 const searchImg = "/assets/imgs/search.svg";
 
-const BlogSideBar = ({
-  currentBlog,
-  setCurrentBlog,
-  categories,
-  blogs,
-  ShowPosts,
-}: any) => {
+type BlogSideBarProps = {
+  currentBlog: Blogs;
+  setCurrentBlog: (value: Blogs) => void;
+  categories: BlogCategory[];
+  blogs: Blogs[];
+  ShowPosts: (value: string) => void;
+};
+
+const BlogSideBar = (props: BlogSideBarProps) => {
+  const { currentBlog, setCurrentBlog, categories, blogs, ShowPosts } = props;
+
   const categoryMap: Record<string, any> = {};
 
-  blogs.forEach((bl: any) => {
+  blogs.forEach((bl: Blogs) => {
     categoryMap[bl.category] = bl;
   });
 
@@ -71,7 +80,7 @@ const BlogSideBar = ({
         </Heading>
 
         <Box mt="25px">
-          {categories.map((category: any, index: any) => {
+          {categories.map((category, index) => {
             return (
               <Box
                 key={index}
@@ -99,7 +108,7 @@ const BlogSideBar = ({
                   bg: "rgba(2, 29, 55, 0.25)",
                 }}
               >
-                <Text>{category}</Text>
+                <Text>{blogCategories[category]}</Text>
               </Box>
             );
           })}
@@ -118,7 +127,7 @@ const BlogSideBar = ({
         </Heading>
 
         <Box>
-          {currentBlog.posts.map((post: any, index: any) => {
+          {currentBlog.posts.map((post, index) => {
             return (
               post.isTopPost && (
                 <Flex
@@ -131,7 +140,7 @@ const BlogSideBar = ({
                       : "1px solid rgba(2, 29, 55, 0.25)"
                   }
                   cursor="pointer"
-                  onClick={() => ShowPosts(post)}
+                  onClick={() => ShowPosts(post.id)}
                   transition="all ease 0.5s"
                   _hover={{
                     bg: "#DDD",
@@ -169,7 +178,7 @@ const BlogSideBar = ({
                       mb="15px"
                       ml="20px"
                     >
-                      {post.postDate}
+                      {/* {post.postDate} */}
                     </Text>
                   </Box>
                 </Flex>

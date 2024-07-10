@@ -6,14 +6,12 @@ import {
   AnnouncementItem,
   AnnouncementsProps,
 } from "components/layouts/Home/Announcements/Announcements";
-import {
-  OurStoriesProps,
-  StoryProps,
-} from "components/layouts/Home/OurStories";
+import { OurStoriesProps } from "components/layouts/Home/OurStories";
 import {
   PartnersImgCard,
   PartnersProps,
 } from "components/layouts/Home/Partners";
+import { BlogPost } from "components/layouts/Blog/Blog";
 
 const showCase: EditableUIConfig<ShowcaseProps> = {
   name: "showCase",
@@ -147,15 +145,17 @@ const announcements: EditableUIConfig<AnnouncementsProps, AnnouncementItem> = {
   groupKey: "title",
 };
 
-const ourStories: EditableUIConfig<OurStoriesProps, StoryProps> = {
+const ourStories: EditableUIConfig<OurStoriesProps, BlogPost> = {
   name: "ourStory",
   title: "Edit Our Stories",
   groupKey: "name",
   emptyFormInitial: {
+    isTopPost: false,
+    postDate: new Date(),
     coverImage: "/assets/imgs/empty-img.jpeg",
     name: "",
     postHeading: "",
-    postId: "",
+    id: "",
     postsImg: "",
     postsText: "",
     text: "",

@@ -83,43 +83,83 @@ const Profile = () => {
         </Editable>
       </Box>
 
-      <Box
-        textAlign="center"
-        my="55px"
-        px={{
-          sm: "20px",
-          md: "20px",
-          lg: "20px",
-        }}
-      >
-        <Heading
-          fontFamily="Playfair Display"
-          fontWeight="700"
-          fontSize="32px"
-          color="#021D37"
-          mb="22px"
-        >
-          Want to get a copy of our e-profile
-        </Heading>
-
-        <Link
-          href="/documents/SCHOOL PROFILE.pdf"
-          target="_blank"
-          fontFamily="Manrope"
-          fontWeight="700"
-          fontSize="20px"
+      <Flex alignItems="center" justifyContent="space-evenly">
+        <Box
           textAlign="center"
-          p="10px 30px"
-          bg="#021D37"
-          borderRadius="3px"
-          color="#fff"
-          _hover={{
-            bg: " #020E1B",
+          my="55px"
+          px={{
+            sm: "20px",
+            md: "20px",
+            lg: "20px",
           }}
         >
-          Download Here
-        </Link>
-      </Box>
+          <Heading
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="32px"
+            color="#021D37"
+            mb="22px"
+          >
+            Get a copy of our e-profile
+          </Heading>
+
+          <Link
+            href="/documents/SCHOOL PROFILE.pdf"
+            target="_blank"
+            fontFamily="Manrope"
+            fontWeight="700"
+            fontSize="20px"
+            textAlign="center"
+            p="10px 30px"
+            bg="#021D37"
+            borderRadius="3px"
+            color="#fff"
+            _hover={{
+              bg: " #020E1B",
+            }}
+          >
+            Download Here
+          </Link>
+        </Box>
+
+        <Box
+          textAlign="center"
+          my="55px"
+          px={{
+            sm: "20px",
+            md: "20px",
+            lg: "20px",
+          }}
+        >
+          <Heading
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="32px"
+            color="#021D37"
+            mb="22px"
+          >
+            Women&apos;s Board Policy
+          </Heading>
+
+          <Link
+            href="/documents/womens board policy.pdf"
+            target="_blank"
+            fontFamily="Manrope"
+            fontWeight="700"
+            fontSize="20px"
+            textAlign="center"
+            p="10px 30px"
+            bg="#021D37"
+            borderRadius="3px"
+            color="#fff"
+            _hover={{
+              bg: " #020E1B",
+            }}
+          >
+            Download Here
+          </Link>
+        </Box>
+      </Flex>
 
       <Flex
         justifyContent="center"

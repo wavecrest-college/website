@@ -27,7 +27,7 @@ const HomepageLayout = () => {
     discoverHospitality,
     announcements,
     defaultStories,
-    defaultPartnersLogos,
+    partners,
   } = { ...combinedConstant.home, ...data.home };
 
   const {
@@ -81,19 +81,15 @@ const HomepageLayout = () => {
       <StudyProgrammes />
 
       <Editable
-        defaultValues={defaultStories}
+        defaultValues={defaultStories as any}
         config={ourStoriesConfig}
         page="home"
       >
         <OurStories stories={defaultStories} />
       </Editable>
 
-      <Editable
-        defaultValues={defaultPartnersLogos}
-        config={partnersConfig}
-        page="home"
-      >
-        <Partners defaultPartnersLogos={defaultPartnersLogos} />
+      <Editable defaultValues={partners} config={partnersConfig} page="home">
+        <Partners partnersAndSponsors={partners} />
       </Editable>
 
       <Footer />
