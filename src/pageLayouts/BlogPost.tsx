@@ -3,13 +3,15 @@ import React, { useState } from "react";
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from "components/molecules/Navbar/Navbar";
 import Header from "components/molecules/Header/Header";
-import { BLOGS, CATEGORIES, POST_MAP } from "data/blog";
+import { CATEGORIES, POST_MAP } from "data/blog";
 import Footer from "components/organisms/Footer/Footer";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Router, { useRouter } from "next/router";
 import BlogSideBar from "components/molecules/BlogSideBar";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import PagesBanner from "components/molecules/PagesBanner";
+import { BLOGS } from "config/constants/editable-copy/blog/values";
+import { formatDate } from "components/layouts/Blog/Blog";
 
 const BlogPost = () => {
   const blogs = BLOGS;
@@ -29,12 +31,15 @@ const BlogPost = () => {
 
   if (!id) return <div>Loading...</div>;
   const post = POST_MAP[id as string] as any;
+
   const image1 = post?.postsImg;
   const image2 = post?.coverImage || image1;
 
-  const ShowPosts = (post: any) => {
-    router.push(`/posts/${post.postId}`);
+  const ShowPosts = (postId: string) => {
+    router.push(`/posts/${postId}`);
   };
+
+  const postDate = formatDate(new Date());
 
   return (
     <>
@@ -44,6 +49,7 @@ const BlogPost = () => {
       <MobileSideBar />
 
       <MobilePageBanner imageURL={image2} title={post?.postHeading} />
+
       <PagesBanner
         imageURL={image2}
         pageName={post?.postHeading}
@@ -97,7 +103,7 @@ const BlogPost = () => {
             fontSize="18px"
             mb="20px"
           >
-            {post?.postsDate}
+            {postDate}
           </Heading>
 
           <Box>
@@ -123,7 +129,6 @@ const BlogPost = () => {
           ShowPosts={ShowPosts}
         />
       </Flex>
-
       <Footer
         address={
           "75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria."

@@ -40,7 +40,8 @@ export type EditableUIConfig<P = unknown, LItem = any> = (
     | "academicStaffs"
     | "nonAcademicStaffs"
     | "trainings"
-    | "programmes";
+    | "programmes"
+    | "blog";
   defaults?: P;
   title: string;
 };

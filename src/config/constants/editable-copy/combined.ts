@@ -1,3 +1,4 @@
+import { blogConfig } from "./blog/config";
 import { homeConstants as home } from "./home/values";
 import { shared } from "./shared/values";
 
@@ -14,11 +15,10 @@ import {
   allStaffs,
   boardMembers,
   managements,
-  // nonAcademicStaff,
-  // odc,
 } from "./about/values";
 import { programmes, trainings } from "./academics/values";
 import { academicsConfig } from "./academics/config";
+import { blog } from "./blog/values";
 
 export const combinedConstant = {
   home,
@@ -29,10 +29,9 @@ export const combinedConstant = {
   aboutMilestone,
   boardMembers,
   managements,
-  // nonAcademicStaff,
-  // odc,
   trainings,
   programmes,
+  blog,
 };
 
 export const combinedConfig = {
@@ -41,4 +40,5 @@ export const combinedConfig = {
   sharedConfig,
   aboutConfig,
   academicsConfig,
+  blogConfig,
 };

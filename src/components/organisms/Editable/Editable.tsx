@@ -28,7 +28,8 @@ type EditableProps = {
     | "boardMembers"
     | "allStaffs"
     | "trainings"
-    | "programmes";
+    | "programmes"
+    | "blog";
 };
 const Editable = (props: EditableProps) => {
   const { page, children, defaultValues, config } = props;

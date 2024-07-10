@@ -13,6 +13,7 @@ import Slider from "react-slick";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
 import PeaceImage from "components/atoms/PeaceImage";
+import { BlogPost } from "../Blog/Blog";
 
 const settings = {
   dots: true,
@@ -26,18 +27,8 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export type StoryProps = {
-  postId: string;
-  name: string;
-  text: string;
-  postHeading: string;
-  postsImg: string;
-  coverImage: string;
-  postsText: string;
-};
-
 export type OurStoriesProps = {
-  stories: StoryProps[];
+  stories: BlogPost[];
 };
 
 export default function OurStories({ stories }: OurStoriesProps) {
@@ -244,11 +235,7 @@ export default function OurStories({ stories }: OurStoriesProps) {
                     {card.text}
                   </Text>
 
-                  <NextLink
-                    href={`/posts/${card.postId}`}
-                    legacyBehavior
-                    passHref
-                  >
+                  <NextLink href={`/posts/${card.id}`} legacyBehavior passHref>
                     <Link
                       background="#FFF"
                       w="168px"
@@ -310,11 +297,7 @@ export default function OurStories({ stories }: OurStoriesProps) {
                   mx="auto"
                 />
 
-                <NextLink
-                  href={`/posts/${card.postId}`}
-                  legacyBehavior
-                  passHref
-                >
+                <NextLink href={`/posts/${card.id}`} legacyBehavior passHref>
                   <Link
                     background="#FFF"
                     w="168px"

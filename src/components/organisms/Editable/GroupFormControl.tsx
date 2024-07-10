@@ -46,7 +46,6 @@ const GroupFormControl = (props: GroupFormControlProps) => {
             onClose={() => setEditingIndex(null)}
           />
         )}
-
         {typeof editingIndex !== "number" && (
           <>
             <Box mt="10px" mb="20px">
