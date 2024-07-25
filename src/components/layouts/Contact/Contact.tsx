@@ -1,4 +1,4 @@
-import { Box, Grid, Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 
 import Form from "./Form";
@@ -7,26 +7,12 @@ import QuickLinks from "./QuickLinks";
 
 const Contact = () => {
   return (
-    <Box pt="50px">
-      <Grid
-        gridTemplateColumns={{
-          sm: "1fr",
-          md: "1fr",
-          lg: "1fr",
-          xl: "auto auto",
-          "2xl": "auto auto",
-        }}
-        gridGap="10px"
-        w={{
-          xl: "1100px",
-          "2xl": "1100px",
-        }}
-        mx="auto"
-      >
+    <Box>
+      <Box>
         <Form />
 
         <VisitUs />
-      </Grid>
+      </Box>
 
       <Box
         display={{
