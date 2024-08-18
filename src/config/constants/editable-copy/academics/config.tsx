@@ -7,6 +7,10 @@ import {
   Programme,
   ProgrammesData,
 } from "components/layouts/Academics/Programmes/Programmes";
+import {
+  Tuition,
+  TuitionsData,
+} from "components/layouts/Admission/tuitionAndScholarship/CourseTuitions";
 
 export const training: EditableUIConfig<TrainingType, TrainingData> = {
   name: "trainings",
@@ -109,9 +113,35 @@ export const programme: EditableUIConfig<Programme, ProgrammesData> = {
   ],
 };
 
+export const tuition: EditableUIConfig<Tuition, TuitionsData> = {
+  name: "tuition",
+  title: "Edit Tuitions",
+  groupKey: "courseTitle",
+  emptyFormInitial: {
+    feesImage: "/assets/imgs/empty-img.jpeg",
+    courseTitle: "",
+  },
+  groupItems: [
+    {
+      label: "Edit Course Title",
+      name: "courseTitle",
+      defaultValue: "",
+      placeholder: "Enter Course Title",
+      type: "text",
+    },
+    {
+      label: "Edit Course Fees",
+      name: "feesImage",
+      type: "image",
+    },
+  ],
+};
+
 export const academicsConfig = {
   programmes: {
     programme,
   },
   trainings: { training },
+
+  tuitions: { tuition },
 };

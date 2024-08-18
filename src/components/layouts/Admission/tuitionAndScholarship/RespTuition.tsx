@@ -1,21 +1,13 @@
 import React, { Fragment } from "react";
-import {
-  Box,
-  Button,
-  Heading,
-  Table,
-  Text,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  TableContainer,
-  Grid,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Grid } from "@chakra-ui/react";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
-import { Tuition } from "../constants";
 import MobileRedirect from "components/molecules/MobileRedirect";
+import {
+  combinedConfig,
+  combinedConstant,
+} from "config/constants/editable-copy/combined";
+import { useCopyData } from "contexts/EditableCopyContext";
+import Editable from "components/organisms/Editable/Editable";
 
 const RespTuition = () => {
   const navigateTo = [
@@ -36,6 +28,16 @@ const RespTuition = () => {
       href: "/admission/faqs",
     },
   ];
+
+  const { academicsConfig } = combinedConfig;
+
+  const { data } = useCopyData();
+
+  const { tuition } = {
+    ...combinedConstant.tuitions,
+    ...data.tuitions,
+  };
+
   return (
     <Fragment>
       <MobilePageBanner
@@ -44,209 +46,36 @@ const RespTuition = () => {
       />
 
       <Box>
-        {Tuition.map((fee, index) => {
-          return (
-            <Box
-              key={index}
-              p={{
-                sm: "50px 20px",
-                md: "50px",
-                lg: "50px",
-              }}
-            >
-              <Box>
-                <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
-                <Heading
-                  fontFamily="Playfair Display"
-                  fontSize="22px"
-                  fontWeight="700"
-                  mb="30px"
-                >
-                  {fee.courseTitle}
-                </Heading>
+        <Editable
+          defaultValues={tuition}
+          config={academicsConfig.tuitions.tuition}
+          page="tuitions"
+        >
+          {tuition.map((fee, index) => {
+            return (
+              <Box
+                key={index}
+                p={{
+                  sm: "50px 20px",
+                  md: "50px",
+                  lg: "50px",
+                }}
+              >
+                <Box>
+                  <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
+                  <Heading
+                    fontFamily="Playfair Display"
+                    fontSize="22px"
+                    fontWeight="700"
+                    mb="30px"
+                  >
+                    {fee.courseTitle}
+                  </Heading>
+                </Box>
               </Box>
-
-              <TableContainer mt="26px" w="915px">
-                <Table>
-                  <Thead borderBottom="2px solid #FFF" w="363px">
-                    <Tr>
-                      <Th
-                        py="20px"
-                        fontFamily="Manrope"
-                        fontWeight="700"
-                        fontSize="24px"
-                        color="#FFF"
-                        ml="12px"
-                        textAlign="center"
-                        borderRight="2px solid #FFF"
-                        bg="#021D37"
-                      >
-                        {fee.item}
-                      </Th>
-
-                      <Th
-                        py="20px"
-                        fontFamily="Manrope"
-                        fontWeight="700"
-                        fontSize="24px"
-                        ml="12px"
-                        borderRight="2px solid #FFF"
-                        color="#FFF"
-                        textAlign="center"
-                        bg="#021D37"
-                      >
-                        {fee.year1}
-                      </Th>
-                      {fee.year2 && (
-                        <Th
-                          isNumeric
-                          py="20px"
-                          fontFamily="Manrope"
-                          fontWeight="700"
-                          fontSize="24px"
-                          color="#FFF"
-                          bg="#021D37"
-                        >
-                          {fee.year2}
-                        </Th>
-                      )}
-                    </Tr>
-                  </Thead>
-
-                  <Tbody>
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td w="363px" borderRight="2px solid #FFF">
-                        {fee.tuitionFee}
-                      </Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.tuitionFeePrice1}
-                      </Td>
-                      {fee.tuitionFeePrice2 && (
-                        <Td textAlign="right" w="245px">
-                          {fee.tuitionFeePrice2}
-                        </Td>
-                      )}
-                    </Tr>
-
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">{fee.discount}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.discountPrice1}
-                      </Td>
-                      {fee.discountPrice2 && (
-                        <Td textAlign="right">{fee.discountPrice2}</Td>
-                      )}
-                    </Tr>
-
-                    <Tr bg="#021D37" color="#FFF">
-                      <Td borderRight="2px solid #FFF">{fee.fees}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.feesPrice1}
-                      </Td>
-                      {fee.feesPrice2 && (
-                        <Td textAlign="right">{fee.feesPrice2}</Td>
-                      )}
-                    </Tr>
-
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">{fee.examinationFee}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.examinationFeePrice1}
-                      </Td>
-                      {fee.examinationFeePrice2 && (
-                        <Td textAlign="right">{fee.examinationFeePrice2}</Td>
-                      )}
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">{fee.workshopFee}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.workshopFeePrice1}
-                      </Td>
-                      {fee.workshopFeePrice2 && (
-                        <Td textAlign="right">{fee.workshopFeePrice2}</Td>
-                      )}
-                    </Tr>
-
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">{fee.devFee}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.devFeePrice1}
-                      </Td>
-                      {fee.devFeePrice2 && (
-                        <Td textAlign="right">{fee.devFeePrice2}</Td>
-                      )}
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">{fee.practicalFee}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.practicalFeePrice1}
-                      </Td>
-
-                      {fee.practicalFeePrice2 && (
-                        <Td textAlign="right">{fee.practicalFeePrice2}</Td>
-                      )}
-                    </Tr>
-
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">{fee.studentID}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.studentIDPrice1}
-                      </Td>
-                      {fee.studentIDPrice2 && (
-                        <Td textAlign="right">{fee.studentIDPrice2}</Td>
-                      )}
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">{fee.hmoScheme}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.hmoSchemePrice1}
-                      </Td>
-                      {fee.hmoSchemePrice2 && (
-                        <Td textAlign="right">{fee.hmoSchemePrice2}</Td>
-                      )}
-                    </Tr>
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">
-                        {fee.studentPracticals}
-                      </Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.studentPracticalsPrice1}
-                      </Td>
-                      {fee.studentPracticalsPrice2 && (
-                        <Td textAlign="right">{fee.studentPracticalsPrice2}</Td>
-                      )}
-                    </Tr>
-
-                    <Tr bg="#021D37" color="#FFF">
-                      <Td borderRight="2px solid #FFF">{fee.totalFees}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {fee.totalFeesPrice1}
-                      </Td>
-                      {fee.totalFeesPrice2 && (
-                        <Td textAlign="right">{fee.totalFeesPrice2}</Td>
-                      )}
-                    </Tr>
-                  </Tbody>
-                </Table>
-              </TableContainer>
-            </Box>
-          );
-        })}
+            );
+          })}
+        </Editable>
 
         <Box
           bg="#EBEDEF"

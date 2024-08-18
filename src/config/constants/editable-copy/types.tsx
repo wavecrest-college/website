@@ -41,6 +41,7 @@ export type EditableUIConfig<P = unknown, LItem = any> = (
     | "nonAcademicStaffs"
     | "trainings"
     | "programmes"
+    | "tuition"
     | "blog";
   defaults?: P;
   title: string;

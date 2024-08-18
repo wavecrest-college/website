@@ -29,6 +29,7 @@ type EditableProps = {
     | "allStaffs"
     | "trainings"
     | "programmes"
+    | "tuitions"
     | "blog";
 };
 const Editable = (props: EditableProps) => {
