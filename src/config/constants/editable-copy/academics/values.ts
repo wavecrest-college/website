@@ -96,10 +96,29 @@ const allProgrammes: ProgrammesData[] = [
   },
 ];
 
+const tuition = [
+  {
+    courseTitle: "Higher National Diploma (HND) in Hospitality Management",
+    feesImage: studyProgrammes3,
+  },
+  {
+    courseTitle: "National Diploma (ND) in Hospitality Management",
+    feesImage: studyProgrammes3,
+  },
+  {
+    courseTitle: "Certificate in Hospitality Operations",
+    feesImage: studyProgrammes3,
+  },
+];
+
 export const trainings = {
   allTrainings,
 };
 
 export const programmes = {
   allProgrammes,
+};
+
+export const tuitions = {
+  tuition,
 };

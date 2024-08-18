@@ -16,7 +16,7 @@ import {
   boardMembers,
   managements,
 } from "./about/values";
-import { programmes, trainings } from "./academics/values";
+import { programmes, trainings, tuitions } from "./academics/values";
 import { academicsConfig } from "./academics/config";
 import { blog } from "./blog/values";
 
@@ -30,6 +30,7 @@ export const combinedConstant = {
   boardMembers,
   managements,
   trainings,
+  tuitions,
   programmes,
   blog,
 };
