@@ -11,6 +11,7 @@ const studyProgrammes3 = "/assets/imgs/studyprogramme.jpg";
 
 const allTrainings: TrainingData[] = [
   {
+    applyURL: "",
     trainingsTitle: "Certificate in Hospitality Management",
     trainingsImage: cehm,
     trainingDurationTime: "FULLTIME",
@@ -22,6 +23,7 @@ const allTrainings: TrainingData[] = [
     fileUrl: "/documents/cehm.pdf",
   },
   {
+    applyURL: "",
     trainingsTitle: "Professional Certificate in Hospitality",
     trainingsImage: training1,
     trainingDurationTime: "FULLTIME",
@@ -33,6 +35,7 @@ const allTrainings: TrainingData[] = [
     fileUrl: "/documents/PCH Brochure.pdf",
   },
   {
+    applyURL: "https://forms.gle/wBCC2ou7ysNGUjwa7",
     trainingsTitle: "Culinary Courses",
     trainingsImage: training2,
     trainingDurationTime: "FULLTIME",
@@ -44,6 +47,7 @@ const allTrainings: TrainingData[] = [
     fileUrl: "/documents/culinary_brochure.pdf",
   },
   {
+    applyURL: "",
     trainingsTitle: "National Skill Qualification",
     trainingsImage: training3,
     trainingDurationTime: "FULLTIME",

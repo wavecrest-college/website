@@ -138,11 +138,11 @@ const Profile = () => {
             color="#021D37"
             mb="22px"
           >
-            Women&apos;s Board Policy
+            Safeguarding Policy
           </Heading>
 
           <Link
-            href="/documents/womens board policy.pdf"
+            href="https://sites.google.com/view/our-resource/resources"
             target="_blank"
             fontFamily="Manrope"
             fontWeight="700"
@@ -156,7 +156,7 @@ const Profile = () => {
               bg: " #020E1B",
             }}
           >
-            Download Here
+            Click Here
           </Link>
         </Box>
       </Flex>
