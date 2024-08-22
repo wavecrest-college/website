@@ -261,7 +261,7 @@ const Courses = ({ training, index }: CoursesType) => {
             </Link>
           </Flex>
 
-          <NextLink href={String(process.env.NEXT_PUBLIC_APPLY_NOW_URL)}>
+          <NextLink href={training.applyURL || ""}>
             <Button
               display="block"
               w="142px"

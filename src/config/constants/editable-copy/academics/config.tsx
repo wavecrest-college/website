@@ -17,6 +17,7 @@ export const training: EditableUIConfig<TrainingType, TrainingData> = {
   title: "Edit Trainings",
   groupKey: "trainingsTitle",
   emptyFormInitial: {
+    applyURL: "",
     trainingsImage: "/assets/imgs/empty-img.jpeg",
     button: "",
     downloadBrochure: "",
@@ -46,6 +47,12 @@ export const training: EditableUIConfig<TrainingType, TrainingData> = {
       name: "fileUrl",
       label: "Upload Brochure(*png, *jpg, *jpeg formats only)",
       type: "image",
+    },
+    {
+      name: "applyURL",
+      label: "Apply Now Link",
+      placeholder: "Enter Apply Now / Register Link",
+      type: "text",
     },
     {
       name: "button",

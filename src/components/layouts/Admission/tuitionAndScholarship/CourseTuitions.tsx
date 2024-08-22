@@ -96,7 +96,7 @@ const CourseTuitions = () => {
                       <PeaceImage
                         w="100%"
                         h="100%"
-                        // objectFit="contain"
+                        objectFit="contain"
                         src={fee.feesImage}
                         alt="announcement-image"
                       />

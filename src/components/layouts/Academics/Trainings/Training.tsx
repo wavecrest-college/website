@@ -10,6 +10,7 @@ import { combinedConfig } from "config/constants/editable-copy/combined";
 import { combinedConstant } from "config/constants/editable-copy/combined";
 
 export type TrainingData = {
+  applyURL: string;
   trainingsTitle?: string;
   trainingsImage: string;
   trainingDurationTime?: string;
