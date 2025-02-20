@@ -3,7 +3,7 @@ type SingleUIField<T> = {
   label: string;
   placeholder?: string;
   defaultValue?: string;
-  type?: "image" | "text" | "textarea";
+  type?: "image" | "text" | "textarea" | 'date';
 };
 
 export type SingleEditableUIConfig<P = unknown> = {

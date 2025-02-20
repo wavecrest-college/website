@@ -5,7 +5,7 @@ import EditTextFormItem from "./EditTextFormItem";
 import { EditableInputProps } from "./types";
 
 type EditableProps = EditableInputProps & {
-  type?: "image" | "text" | "textarea";
+  type?: "image" | "text" | "textarea" | 'date';
 };
 
 const EditUIFormItem = (props: EditableProps) => {

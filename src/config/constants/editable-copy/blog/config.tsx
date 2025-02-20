@@ -34,7 +34,12 @@ export const blog: EditableUIConfig<Blogs, BlogPost> = {
       type: "textarea",
       placeholder: "Enter Posts",
     },
-
+    {
+      label: "Enter Date",
+      name: "postDate",
+      type: "date",
+      placeholder: "Enter Posts",
+    },
     {
       label: "Add Cover Image (Optional)",
       name: "coverImage",

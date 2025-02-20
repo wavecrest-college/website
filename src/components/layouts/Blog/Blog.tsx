@@ -9,7 +9,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import {CATEGORIES } from "data/blog";
+import { CATEGORIES } from "data/blog";
 import { useRouter } from "next/router";
 import MobileBlogMenu from "./MobileBlogMenu";
 import Editable from "components/organisms/Editable/Editable";
