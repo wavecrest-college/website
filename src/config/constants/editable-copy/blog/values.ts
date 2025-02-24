@@ -46,7 +46,7 @@ export const BLOGS: Blogs[] = [
         id: uuidv4(),
         isTopPost: true,
         postsImg: finishingStrong,
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Dec 15 2023 00:00:00 GMT+0100"),
         postHeading:
           "Wavecrest College received the SKILLS INITIATIVE FOR AFRICA(SIFA) grant for the construction of the WAVECREST-HSEDCE",
         postsText: `Through this expansion, we will train 1,000 women annually and serve the growing demands of skilled labor in the Hospitality Industry`,
@@ -75,7 +75,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Aug 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: ishkTolaram2,
         coverImage: ishkTolaram,
@@ -94,7 +94,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: instructorTraining,
         coverImage: instructorTraining2,
@@ -120,7 +120,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: internship,
         coverImage: internship,
@@ -178,7 +178,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Nov 5th 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: staffSeminar,
         coverImage: staffSeminar2,
@@ -209,7 +209,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed March 23 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: wheatbaker,
         coverImage: wheatbaker2,
@@ -232,7 +232,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: swiss,
         coverImage: swiss2,
@@ -262,7 +262,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Nov 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: arise,
         coverImage: arise2,
@@ -289,7 +289,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: lsgSkyChef,
         coverImage: lsgSkyChef2,
@@ -315,7 +315,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: careerDrive1,
 
@@ -341,7 +341,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: NBTEdirector,
         postHeading:
@@ -351,7 +351,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: suicideEvent,
         postHeading: "World Suicide Prevention Day",
@@ -360,7 +360,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: blogPost,
         postHeading:
@@ -370,7 +370,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: nbte,
         postHeading: "NSQ PROGRAMMES AVAILABLE",
@@ -385,7 +385,7 @@ export const BLOGS: Blogs[] = [
     posts: [
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: cookFish,
         postHeading: "The Different Ways To Cook Fish",
@@ -394,7 +394,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: catfish,
         postHeading: "CATFISH PEPPER SOUP",
@@ -403,7 +403,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: ekpangNkukwo,
         postHeading: "EKPANG NKUKWO",
@@ -418,7 +418,7 @@ export const BLOGS: Blogs[] = [
     posts: [
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: Udoka,
         postHeading:
@@ -428,7 +428,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: blogPost2,
         postHeading:
@@ -444,7 +444,7 @@ export const BLOGS: Blogs[] = [
     posts: [
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: airport,
         postHeading:
@@ -454,7 +454,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: airTravels,
         postHeading: "The future of Air Travels after COVID 19- Sheba Asuquo",
@@ -463,7 +463,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: hotel,
         postHeading:
@@ -473,7 +473,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: decorating,
         postHeading: "Top 3 Creative Ideas for Decorating Your Dining Table",
@@ -488,7 +488,7 @@ export const BLOGS: Blogs[] = [
     posts: [
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: developingSkills,
         postHeading:
@@ -498,7 +498,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         isTopPost: true,
         postsImg: uchyfide,
         postHeading:
@@ -508,7 +508,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Jun 15 2022 00:00:00 GMT+0100"),
+        postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
         postsImg: studentLetter,
         isTopPost: true,
         postHeading: "A Letter to my students during lockdown",
