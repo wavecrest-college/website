@@ -178,7 +178,7 @@ export const BLOGS: Blogs[] = [
       },
       {
         id: uuidv4(),
-        postDate: new Date("Wed Nov 5th 2023 00:00:00 GMT+0100"),
+        postDate: new Date("Wed November 5 2023 00:00:00 GMT+0100"),
         isTopPost: false,
         postsImg: staffSeminar,
         coverImage: staffSeminar2,

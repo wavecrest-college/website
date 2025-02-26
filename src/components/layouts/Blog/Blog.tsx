@@ -67,15 +67,18 @@ export const formatDate = (dateObj: Date) => {
     "December",
   ];
 
+  const day = dateObj.getDate();
   const month = dateObj.getMonth();
   const year = dateObj.getFullYear();
-  return `${months[month]}  ${year}`;
+  return `${months[month]} ${day}, ${year}`;
 };
 
 const Blog = (props: BlogProps) => {
   const { currentBlog, setCurrentBlog } = props;
 
-  const [selectedCategoryPosts, setSelectedCategoryPosts] = useState<BlogPost[]>([]);
+  const [selectedCategoryPosts, setSelectedCategoryPosts] = useState<
+    BlogPost[]
+  >([]);
 
   useEffect(() => {
     setSelectedCategoryPosts(currentBlog.posts);
