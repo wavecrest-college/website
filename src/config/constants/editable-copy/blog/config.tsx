@@ -18,7 +18,7 @@ export const blog: EditableUIConfig<Blogs, BlogPost> = {
 
   groupItems: [
     {
-      label: "Emter Post Image",
+      label: "Enter Post Image",
       name: "postsImg",
       type: "image",
     },
