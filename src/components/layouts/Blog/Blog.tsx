@@ -67,9 +67,11 @@ export const formatDate = (dateObj: Date) => {
     "December",
   ];
 
-  const day = dateObj.getDate();
-  const month = dateObj.getMonth();
-  const year = dateObj.getFullYear();
+  const date = new Date(dateObj);
+
+  const day = date.getDate();
+  const month = date.getMonth();
+  const year = date.getFullYear();
   return `${months[month]} ${day}, ${year}`;
 };
 
@@ -93,7 +95,29 @@ const Blog = (props: BlogProps) => {
     ...data.blog,
   };
 
+  const updatedBlog = [...data.blog.blog].reverse();
+
   const categories = CATEGORIES;
+
+  useEffect(() => {
+    const currentCategory = currentBlog.category;
+    const selectedCategory = categories.find(
+      (category) => category === currentCategory
+    );
+
+    if (selectedCategory) {
+      const selectedPosts = BLOGS.find(
+        (blog) => blog.category === selectedCategory
+      )?.posts;
+
+      if (selectedPosts) {
+        setCurrentBlog({
+          category: "news",
+          posts: updatedBlog as any,
+        });
+      }
+    }
+  }, [data]);
 
   const router = useRouter();
 
@@ -179,6 +203,7 @@ const Blog = (props: BlogProps) => {
               xl: "1fr 1fr",
               "2xl": "1fr 1fr",
             }}
+            gap="20"
             w="100%"
             cursor="pointer"
           >

@@ -14,7 +14,7 @@ import { BLOGS } from "config/constants/editable-copy/blog/values";
 
 const BlogpageLayout = () => {
   const blogs = BLOGS;
-  const [currentBlog, setCurrentBlog] = useState(blogs[0]);
+  const [currentBlog, setCurrentBlog] = useState(BLOGS[0]);
   const categories = CATEGORIES;
 
   const router = useRouter();

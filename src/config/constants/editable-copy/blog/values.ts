@@ -95,7 +95,7 @@ export const BLOGS: Blogs[] = [
       {
         id: uuidv4(),
         postDate: new Date("Wed Jun 15 2023 00:00:00 GMT+0100"),
-        isTopPost: true,
+        isTopPost: false,
         postsImg: instructorTraining,
         coverImage: instructorTraining2,
         postHeading: "Instructors Training Workshop ",
@@ -521,4 +521,5 @@ export const BLOGS: Blogs[] = [
 
 export const blog = {
   BLOGS,
+  blog: BLOGS,
 };
