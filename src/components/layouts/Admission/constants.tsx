@@ -58,7 +58,7 @@ export type RequirementsProps = {
 
 export const requirements: RequirementsProps[] = [
   {
-    linkTo: "https://paystack.com/pay/wchform2",
+    linkTo: process.env.NEXT_PUBLIC_APPLY_NOW_URL as string,
     background: "#FFF",
     course: "Higher National Diploma (HND) in Hospitality Management",
     coursePic: studyProgrammes1,
@@ -68,7 +68,7 @@ export const requirements: RequirementsProps[] = [
     ],
   },
   {
-    linkTo: "https://paystack.com/pay/wchform1",
+    linkTo: process.env.NEXT_PUBLIC_APPLY_NOW_URL as string,
     background: "#EBEDEF",
     course: "National Diploma (ND) in Hospitality Management",
     coursePic: studyProgrammes3,
@@ -79,7 +79,7 @@ export const requirements: RequirementsProps[] = [
     viewUpdate: "Click to view updated Subject combinations",
   },
   {
-    linkTo: "https://paystack.com/pay/wchform1",
+    linkTo: process.env.NEXT_PUBLIC_APPLY_NOW_URL as string,
 
     background: "#FFF",
     course: "Certificate in Hospitality Operations",
