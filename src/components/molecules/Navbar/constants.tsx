@@ -148,7 +148,7 @@ export const sideLinks = [
   },
   {
     name: "APPLY NOW",
-    href: "https://tinyurl.com/WCH-Application-Form-24-25",
+    href: process.env.NEXT_PUBLIC_APPLY_NOW_URL as string, 
     variant: "filled" as const,
   },
 ];
