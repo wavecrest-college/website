@@ -101,7 +101,7 @@ const HostelApplicationForm = () => {
         textAlign="left"
         fontFamily="Manrope"
         border="none"
-        onChange={(e) => {
+        onChange={(e: any) => {
           const programme = JSON.parse(e.target.value);
           setShowCoursePrice(programme);
         }}

@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { SessionProvider } from "next-auth/react";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
 import Seo from "../components/atoms/Seo";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
@@ -40,7 +40,7 @@ export default function MyApp({ session, Component, pageProps }: any) {
 
   return (
     <>
-    <Analytics/>
+      <Analytics />
       <Seo {...pageProps.seo} />
 
       <ChakraProvider theme={theme}>
