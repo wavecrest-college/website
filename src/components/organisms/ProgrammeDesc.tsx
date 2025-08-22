@@ -3,7 +3,7 @@ import {
   Button,
   Flex,
   Heading,
-  Image,
+  // Image,
   Link,
   Text,
 } from "@chakra-ui/react";
@@ -16,6 +16,7 @@ import JsFileDownloader from "js-file-downloader";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import NextLink from "next/link";
 import Footer from "./Footer/Footer";
+import Image from "next/image";
 
 type ProgrammeDescProps = {
   bannerImg: string;
@@ -47,11 +48,11 @@ const ProgrammeDesc = (props: ProgrammeDescProps) => {
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
         <Image
-          alt="About"
           src={bannerImg}
-          h="100%"
-          w="100%"
-          objectFit="cover"
+          alt="About"
+          fill
+          priority
+          style={{ objectFit: "cover" }}
         />
 
         <Box
@@ -293,10 +294,9 @@ const ProgrammeDesc = (props: ProgrammeDescProps) => {
                     <Image
                       src={quickLink.image}
                       alt="quicklink-image"
-                      w="100%"
-                      h="100%"
-                      borderRadius="3px"
-                      objectFit="cover"
+                      fill
+                      priority
+                      style={{ objectFit: "cover", borderRadius: "3px" }}
                     />
 
                     <Flex
